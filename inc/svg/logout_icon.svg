@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="27px" height="27px" viewBox="0 0 27 27" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
+    <title>Shape</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="TSMC-PM/QA-APP_batch-1,-2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.85">
+        <g id="style-guide" transform="translate(-405.000000, -4375.000000)" fill="#FFFFFF">
+            <g id="Group-46" transform="translate(58.000000, 3339.000000)">
+                <g id="Group-33" transform="translate(278.000000, 65.000000)">
+                    <g id="side-menu-copy" transform="translate(0.000000, 1.000000)">
+                        <g id="Group-32" transform="translate(69.000000, 970.000000)">
+                            <g id="Group-28">
+                                <g id="ic_exit_to_app-copy">
+                                    <path d="M10.635,18.885 L12.75,21 L20.25,13.5 L12.75,6 L10.635,8.115 L14.505,12 L0,12 L0,15 L14.505,15 L10.635,18.885 L10.635,18.885 Z M3,0 C1.335,0 0,1.35 0,3 L0,9 L3,9 L3,3 L22,3 C23.1045695,3 24,3.8954305 24,5 L24,22 C24,23.1045695 23.1045695,24 22,24 L3,24 L3,18 L0,18 L0,24 C0,25.65 1.335,27 3,27 L24,27 C25.65,27 27,25.65 27,24 L27,3 C27,1.35 25.65,0 24,0 L3,0 Z" id="Shape"></path>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

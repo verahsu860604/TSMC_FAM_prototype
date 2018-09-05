@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TSMC 查詢清單</title>
+    <script src="../../inc/js/jquery-3.3.1.min.js"></script>
+    <script src="../../inc/js/bootstrap.min.js"></script>
+    <script src="../dist/bundle.js"></script>
+    <!-- <script src="../../inc/js/index.js"></script> -->
+    <script src="../../inc/js/action.js"></script>
+    <script src="../../inc/js/base.js"></script>
+    <link rel="stylesheet" href="../../inc/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../inc/css/base.css">
+    <link rel="stylesheet" href="../../inc/css/layout.css">
+    <link rel="stylesheet" href="../../inc/css/form.css">
+    <link rel="stylesheet" href="../../inc/css/comm.css">
+</head>
+
+<body>
+    <div class="mask-layout">
+        <div class="mask-block">
+            <div class="mask-icon"></div>
+            <p class="mask-txt">載入中</p>
+        </div>
+    </div>
+    <div id="header">
+        <div class="left-menu">
+            <button class="left-menu-btn">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <span class="titleName">PM工單回報管理</span>
+            
+            <!--選單內容開始-->
+            <div class="menu-layout"></div>
+            <div class="left-menu-content">
+                <div class="nav-header">
+                    <button class="ui-close" id="close_left_menu"></button>
+                    <div class="welcome-title">
+                        <i></i>
+                        <div class="welcome-title-content">
+                            <span class="welcome-title-h1">蔡O明</span>
+                            <br/>
+                            <span class="welcome-txt">MAMOMADA</span>
+                        </div>
+                    </div>
+                </div>
+                <ul class="nav-tabs1">
+                    <li class="menuActive"  >
+                        <a href="#">PM工單回報管理</a>
+                    </li>
+                    <li>
+                        <a href="../stock/search_list.html">庫房領退料管理</a>
+                    </li>
+                    <li>
+                        <a href="#">倉庫盤點計劃</a>
+                    </li>
+                    
+                </ul>
+                <div class="nav-footer">
+                    <button class="win_100per">
+                        <i></i>登出系統</button>
+                </div>
+            </div>
+            <!--選單內容結束-->
+
+        </div>
+        <div class="sticky">
+            <div class="header-logo sm">
+                <a href="#" class="logo_only"></a>
+            </div>
+            <div class="head-searchbox">
+                <div class="search-content">
+                    <div class="search_cal col-sm-11">
+                        <i class="ui-search-trigger col-sm-1"></i>
+                        <div>
+                            <div class="more_search" style="display: none">
+                                <span class="txt"></span>
+                                <span class="cross">X</span>
+                            </div>
+                            <input type="text" class="ui-search col-sm-10 pla_ct" placeholder="請輸入或掃描設備編號條碼進行查詢" />
+                        </div>
+                        <span class="clear col-sm-1">X</span>
+                    </div>
+                    <div>
+                        <button class="search-scan col-sm-1"></button>
+                        <input type="file" id="scan1" accept="image/*" capture="environment" style="display: none;">
+                    </div>
+                </div>
+                <a href="#" data-toggle="modal" data-target="#moresearch" class="link_red1">進階查詢</a>
+
+
+            </div>
+        </div>
+        <div id="menu">
+            <nav class="nav_mega_menu">
+                <ul>
+                    <li class=" btn_org12 active">
+                        <a href="#" class="today">本日(含)以前(16)</a>
+                    </li>
+                    <li>
+                        <a href="#">近一週</a>
+                    </li>
+                    <li>
+                        <a href="#">逾期</a>
+                    </li>
+                    <li>
+                        <a href="#">全部</a>
+                    </li>
+                    <li class="btn_org12 today_finish" style="position: relative;">
+                        <hr style="position: absolute;border:none;border-left:3px solid hsla(200, 10%, 50%,100);
+                            height:33px;
+                            width:10px;left:-8px;top: -20px;">
+                        <a href="#" class="finish" >本日完成</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <div id="contact">
+        <div class="wrapper-size">
+            <div class="nav-list txt_ct mar_b15px">
+                <!-- <ul class="nav-tabs2 wid_50per" role="tablist">
+                    <li role="presentation" class="active wid_50per">
+                        <a href="#tab1" data-toggle="tab">待完成 (16)</a>
+                    </li>
+                    <li role="presentation" class="wid_50per">
+                        <a href="#tab2" data-toggle="tab">簽核中 (16)</a>
+                    </li>
+                </ul> -->
+                <div class="extend-table1">
+                        <!-- <span class="txt_gray">展開工單</span> -->
+                        <!-- <input type="checkbox" name="展開" id="switch" class="s1">
+                        <label for="switch" id="switchDot">
+                                <span class="onoffswitch-inner1"></span>
+                                <span class="onoffswitch-switch1"></span>
+                        </label> -->
+                        <div class="onoffswitch">
+                                <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox s1" id="myonoffswitch" checked>
+                                <label class="onoffswitch-label" for="myonoffswitch">
+                                    <span class="onoffswitch-inner"></span>
+                                    <span class="onoffswitch-switch"></span>
+                                </label>
+                            </div>
+                </div>
+
+                <div class="extend-table2">
+                    <span>共16筆</span>
+                </div>
+                        
+                <div class="extend-table">
+                    <!-- <span class="txt_gray">本人</span> -->
+                    <!-- <input type="checkbox" name="" id="switch" class="s7">
+                    <label for="switch" id="switchDot"></label> -->
+                    <!-- <label class="switch ">
+                            <input type="checkbox" class="s2" >
+                            <span class="slider round"></span>
+                          </label> -->
+
+                          <div class="onoffs1">
+                                <input type="checkbox" name="onoffs1" class="onoffs-checkbox1 s2" id="myonoffs1">
+                                <label class="onoffs-label1" for="myonoffs1">
+                                    <span class="onoffs-inner1"></span>
+                                    <span class="onoffs-switch1"></span>
+                                </label>
+                            </div>
+                          
+                </div>    
+                    <!-- <div class="radio1">
+                        <label>
+                            <input type="radio" name="radio1" id="fold" checked>
+                            <span class="radio-dot">Y</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="radio1" id="unfold">
+                            <span class="radio-dot">N</span>
+                        </label>
+                    </div> -->
+                
+            </div>
+
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane active" id="tab1">
+                    <table class="tb_sin wid_100per">
+                        <thead>
+                            <tr>
+                                <th style="width: 55px;">工單編號/資產</th>
+                                <th style="width: 30px;"></th>
+                                <th class="wid_100px">預防保養說明</th>
+                                <th >基準日</th>
+                                <th>預計執行日</th>
+                                <th>工單執行期限</th>
+                                <th class="wid_120px">保養回報工程師</th>
+                                <th>狀態</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr class="tr1">
+                                <td class="main" onclick="location.href='../../html/PMreport/search_detail.html'">
+                                    <small class="txt_gray4">母工單(3) </small>
+                                    <br/>
+                                    <span class="txt_big title_num">WO20170000013420 </span>
+                                </td>
+                                <td>
+                                    <span> <img src="../../inc/svg/minus.svg" alt="open" class="close_child" style="width: 18px;height: 18px; margin-top: 15px;"></span>
+                                </td>
+                                <td class="txt_gray1">
+                                        <span class="popover2">我是備註說明文字兩行超過後...</span>
+                                        <span class="more-info1">輕觸欄位跳出完整說明浮窗，再次點擊後消失輕觸欄位跳出完整說明浮窗，再次點擊後消失輕觸欄位跳出完整說明浮窗，再次點擊後消失</span>
+                                    </td>
+                                <td onclick="location.href='../../html/PMreport/search_detail.html'">2016/07/22<br> 10:24</td>
+                                <td onclick="location.href='../../html/PMreport/search_detail.html'">2016/07/22<br> 10:24</td>
+                                <td onclick="location.href='../../html/PMreport/search_detail.html'">2016/07/22<br> 10:24</td>
+                                <td onclick="location.href='../../html/PMreport/search_detail.html'">Y_TILSMJ</td>
+                                <td onclick="location.href='../../html/PMreport/search_detail.html'"class="txt_org">
+                                    <i class="ui-dot"></i>
+                                    <strong class="txt_big">待回報</strong>
+                                </td>
+                            </tr>
+                            <tr class="tr2 WO20170000013420">
+                                <td>
+                                    <span class="spacing"></span>
+                                    <span class="txt_gray txt_big title_num">F15-ASSET100</td>
+                                <td></td>
+                                <td class="txt_gray1">
+                                    <span class="popover2">我是備註說明文字兩行超過後...</span>
+                                    <span class="more-info1">輕觸欄位跳出完整說明浮窗，再次點擊後消失輕觸欄位跳出完整說明浮窗，再次點擊後消失輕觸欄位跳出完整說明浮窗，再次點擊後消失</span>
+                                </td>
+                                <td>2016/07/22<br> 10:24</td>
+                                <td>2016/07/22<br> 10:24</td>
+                                <td>2016/07/22<br> 10:24</td>
+                                <td>MAXADAMO</td>
+                                <td class="txt_org">
+                                    <i class="ui-dot"></i>
+                                    <strong class="txt_big">待回報</strong>
+                                    
+                                </td>
+                            </tr>
+                            <tr class="tr2 WO20170000013420">
+                                <td>
+                                    <span class="spacing"></span>
+                                    <span class="txt_gray txt_big title_num">F15-ASSET101</td>
+                                <td></td>
+                                <td class="txt_gray1">
+                                        <span class="popover2">我是備註說明文字兩行超過後...</span>
+                                        <span class="more-info1">輕觸欄位跳出完整說明浮窗，再次點擊後消失輕觸欄位跳出完整說明浮窗，再次點擊後消失輕觸欄位跳出完整說明浮窗，再次點擊後消失</span>
+                                    </td>
+                                <td>2016/07/22<br> 10:24</td>
+                                <td>2016/07/22<br> 10:24</td>
+                                <td>2016/07/22<br> 10:24</td>
+                                <td>MAXADAMO</td>
+                                <td class="txt_gray3">
+                                    <i class="ui-dot"></i>
+                                    <strong class="txt_big">已回報</strong>
+                                    
+                                </td>
+                            </tr>
+                            <tr class="tr2 WO20170000013420">
+                                <td>
+                                    <span class="spacing"></span>
+                                    <span class="txt_gray txt_big title_num">F15-ASSET102</td>
+                                <td></td>
+                                <td class="txt_gray1">
+                                        <span class="popover2">我是備註說明文字兩行超過後...</span>
+                                        <span class="more-info1">輕觸欄位跳出完整說明浮窗，再次點擊後消失輕觸欄位跳出完整說明浮窗，再次點擊後消失輕觸欄位跳出完整說明浮窗，再次點擊後消失</span>
+                                    </td>
+                                <td>2016/07/22<br> 10:24</td>
+                                <td>2016/07/22<br> 10:24</td>
+                                <td>2016/07/22<br> 10:24</td>
+                                <td>MAXADAMO</td>
+                                <td class="txt_gray3">
+                                    <i class="ui-dot"></i>
+                                    <strong class="txt_big">已回報</strong>
+                                    
+                                </td>
+                            </tr>
+                            <tr class="tr1" onclick="location.href='../../html/PMreport/search_detail-1.html'">
+                                <td>
+                                    <div class="txt_big title_num">WO20170000013424</div>
+                                    <span class="spacing"></span>
+                                    <span class="txt_gray txt_big title_num">P1THC-ZERO-C01</td>
+                                <td></td>
+                                <td class="txt_gray1">
+                                        <span class="popover2">我是備註說明文字兩行超過後...</span>
+                                        <span class="more-info1">輕觸欄位跳出完整說明浮窗，再次點擊後消失輕觸欄位跳出完整說明浮窗，再次點擊後消失輕觸欄位跳出完整說明浮窗，再次點擊後消失</span>
+                                    </td>
+                                <td>2016/07/22<br> 10:24</td>
+                                <td>2016/07/22<br> 10:24</td>
+                                <td>2016/07/22<br> 10:24</td>
+                                <td>Y_TILSMJ</td>
+                                <td class="txt_org">
+                                    <i class="ui-dot"></i>
+                                    <strong class="txt_big">待回報</strong>
+                                </td>
+                            </tr>
+                            <tr class="tr1 notlice">
+                                <td>
+                                    <small class="txt_gray4">PM母工單(13) </small>
+                                    <br/>
+                                    <span class="txt_big title_num">WO20170000013310</span>
+                                </td>
+                                <td></td>
+                                <td class="txt_gray1">
+                                        <span class="popover2">我是備註說明文字兩行超過後...</span>
+                                        <span class="more-info1">輕觸欄位跳出完整說明浮窗，再次點擊後消失輕觸欄位跳出完整說明浮窗，再次點擊後消失輕觸欄位跳出完整說明浮窗，再次點擊後消失</span>
+                                    </td>
+                                <td>2016/07/22<br> 10:24</td>
+                                <td>2016/07/22<br> 10:24</td>
+                                <td>2016/07/22<br> 10:24</td>
+                                <td>Y_TILSMJ</td>
+                                <td class="txt_org">
+                                    <i class="ui-dot"></i>
+                                    <strong class="txt_big">待回報</strong>
+                                    
+                                </td>
+                            </tr>
+                        
+                            <tr class="tr1">
+                                <td class="main">
+                                    <small class="txt_gray4">母工單(3) </small>
+                                    <br/>
+                                    <span class="txt_big title_num">WO20170000013311</span>
+                                </td>
+                                <td>
+                                    <span> <img src="../../inc/svg/minus.svg" alt="open" class="close_child" style="width: 18px;height: 18px;margin-top: 15px;"></span>
+                                </td>
+                                <td class="txt_gray1">
+                                        <span class="popover2">我是備註說明文字兩行超過後...</span>
+                                        <span class="more-info1">輕觸欄位跳出完整說明浮窗，再次點擊後消失輕觸欄位跳出完整說明浮窗，再次點擊後消失輕觸欄位跳出完整說明浮窗，再次點擊後消失</span>
+                                    </td>
+                                <td>2016/07/22<br> 10:24</td>
+                                <td>2016/07/22<br> 10:24</td>
+                                <td>2016/07/22<br> 10:24</td>
+                                <td>Y_TILSMJ</td>
+                                <td class="txt_org">
+                                    <i class="ui-dot" style="background-color:red"></i>
+                                    <strong class="txt_big" style="color: red">待回報</strong>
+                                    
+                                </td>
+                            </tr>
+                            <tr class="tr2 WO20170000013311">
+                                <td>
+                                    <span class="spacing"></span>
+                                    <span class="txt_gray txt_big title_num">F15-ASSET100</td>
+                                <td></td>
+                                <td class="txt_gray1">
+                                        <span class="popover2">我是備註說明文字兩行超過後...</span>
+                                        <span class="more-info1">輕觸欄位跳出完整說明浮窗，再次點擊後消失輕觸欄位跳出完整說明浮窗，再次點擊後消失輕觸欄位跳出完整說明浮窗，再次點擊後消失</span>
+                                    </td>
+                                <td>2016/07/22<br> 10:24</td>
+                                <td>2016/07/22<br> 10:24</td>
+                                <td>2016/07/22<br> 10:24</td>
+                                <td>MAXADAMO</td>
+                                <td class="txt_org">
+                                    <i class="ui-dot" style="background-color: red"></i>
+                                    <strong class="txt_big" style="color: red">待回報</strong>
+                                </td>
+                            </tr>
+                            <tr class="tr2 WO20170000013311">
+                                <td>
+                                    <span class="spacing"></span>
+                                    <span class="txt_gray txt_big title_num">F15-ASSET101</td>
+                                <td></td>
+                                <td class="txt_gray1">
+                                        <span class="popover2">我是備註說明文字兩行超過後...</span>
+                                        <span class="more-info1">輕觸欄位跳出完整說明浮窗，再次點擊後消失輕觸欄位跳出完整說明浮窗，再次點擊後消失輕觸欄位跳出完整說明浮窗，再次點擊後消失</span>
+                                    </td>
+                                <td>2016/07/22<br> 10:24</td>
+                                <td>2016/07/22<br> 10:24</td>
+                                <td>2016/07/22<br> 10:24</td>
+                                <td>MAXADAMO</td>
+                                <td class="txt_gray3">
+                                    <i class="ui-dot" style="background-color: red"></i>
+                                    <strong class="txt_big" style="color: red;">已回報</strong>
+                                    
+                                </td>
+                            </tr>
+                            <tr class="tr2 WO20170000013311">
+                                <td>
+                                    <span class="spacing"></span>
+                                    <span class="txt_gray txt_big title_num">F15-ASSET102</td>
+                                <td></td>
+                                <td class="txt_gray1">
+                                        <span class="popover2">我是備註說明文字兩行超過後...</span>
+                                        <span class="more-info1">輕觸欄位跳出完整說明浮窗，再次點擊後消失輕觸欄位跳出完整說明浮窗，再次點擊後消失輕觸欄位跳出完整說明浮窗，再次點擊後消失</span>
+                                    </td>
+                                <td>2016/07/22<br> 10:24</td>
+                                <td>2016/07/22<br> 10:24</td>
+                                <td>2016/07/22<br> 10:24</td>
+                                <td>MAXADAMO</td>
+                                <td class="txt_gray3">
+                                    <i class="ui-dot" style="background-color: red"></i>
+                                    <strong class="txt_big" style="color: red">已回報</strong>
+                                    
+                                </td>
+                            </tr>
+                    
+                            <tr class="tr1">
+                                <td class="main">
+                                    <small class="txt_gray4">母工單(3) </small>
+                                    <br/>
+                                    <span class="txt_big title_num">WO20170000013312</span>
+                                </td>
+                                <td>
+                                    <span> <img src="../../inc/svg/minus.svg" alt="open" class="close_child" style="width: 18px;height: 18px; margin-top: 15px;"></span>
+                                </td>
+                                <td class="txt_gray1">
+                                        <span class="popover2">我是備註說明文字兩行超過後...</span>
+                                        <span class="more-info1">輕觸欄位跳出完整說明浮窗，再次點擊後消失輕觸欄位跳出完整說明浮窗，再次點擊後消失輕觸欄位跳出完整說明浮窗，再次點擊後消失</span>
+                                    </td>
+                                <td>2016/07/22<br> 10:24</td>
+                                <td>2016/07/22<br> 10:24</td>
+                                <td>2016/07/22<br> 10:24</td>
+                                <td>Y_TILSMJ</td>
+                                <td class="txt_org">
+                                    <i class="ui-dot"></i>
+                                    <strong class="txt_big">待回報</strong>
+                                    
+                                </td>
+                            </tr>
+                            <tr class="tr2 WO20170000013312">
+                                <td>
+                                    <span class="spacing"></span>
+                                    <span class="txt_gray txt_big title_num">F15-ASSET100</td>
+                                <td></td>
+                                <td class="txt_gray1">
+                                        <span class="popover2">我是備註說明文字兩行超過後...</span>
+                                        <span class="more-info1">輕觸欄位跳出完整說明浮窗，再次點擊後消失輕觸欄位跳出完整說明浮窗，再次點擊後消失輕觸欄位跳出完整說明浮窗，再次點擊後消失</span>
+                                    </td>
+                                <td>2016/07/22<br> 10:24</td>
+                                <td>2016/07/22<br>10:24</td>
+                                <td>2016/07/22<br>10:24</td>
+                                <td>MAXADAMO</td>
+                                <td class="txt_org">
+                                    <i class="ui-dot"></i>
+                                    <strong class="txt_big">待回報</strong>
+                                    
+                                </td>
+                            </tr>
+                            <tr class="tr2 WO20170000013312">
+                                <td>
+                                    <span class="spacing"></span>
+                                    <span class="txt_gray txt_big title_num">F15-ASSET101</td>
+                                <td></td>
+                                <td class="txt_gray1">
+                                        <span class="popover2">我是備註說明文字兩行超過後...</span>
+                                        <span class="more-info1">輕觸欄位跳出完整說明浮窗，再次點擊後消失輕觸欄位跳出完整說明浮窗，再次點擊後消失輕觸欄位跳出完整說明浮窗，再次點擊後消失</span>
+                                    </td>
+                                <td>2016/07/22<br> 10:24</td>
+                                <td>2016/07/22<br>10:24</td>
+                                <td>2016/07/22<br>10:24</td>
+                                <td>MAXADAMO</td>
+                                <td class="txt_gray3">
+                                    <i class="ui-dot"></i>
+                                    <strong class="txt_big">已回報</strong>
+                                    
+                                </td>
+                            </tr>
+                            <tr class="tr2 WO20170000013312">
+                                <td>
+                                    <span class="spacing"></span>
+                                    <span class="txt_gray txt_big title_num">F15-ASSET102</td>
+                                <td></td>
+                                <td class="txt_gray1">
+                                        <span class="popover2">我是備註說明文字兩行超過後...</span>
+                                        <span class="more-info1">輕觸欄位跳出完整說明浮窗，再次點擊後消失輕觸欄位跳出完整說明浮窗，再次點擊後消失輕觸欄位跳出完整說明浮窗，再次點擊後消失</span>
+                                    </td>
+                                <td>2016/07/22<br> 10:24</td>
+                                <td>2016/07/22<br> 10:24</td>
+                                <td>2016/07/22<br> 10:24</td>
+                                <td>MAXADAMO</td>
+                                <td class="txt_gray3">
+                                    <i class="ui-dot"></i>
+                                    <strong class="txt_big">已回報</strong>
+                                    
+                                </td>
+                            </tr>
+                            <tr class="tr1">
+                                <td>
+                                    <div class="txt_big title_num">WO20170000013424</div>
+                                    <span class="spacing"></span>
+                                    <span class="txt_gray txt_big title_num">P1THC-ZERO-C01</td>
+                                <td></td>
+                                <td class="txt_gray1">
+                                        <span class="popover2">我是備註說明文字兩行超過後...</span>
+                                        <span class="more-info1">輕觸欄位跳出完整說明浮窗，再次點擊後消失輕觸欄位跳出完整說明浮窗，再次點擊後消失輕觸欄位跳出完整說明浮窗，再次點擊後消失</span>
+                                    </td>
+                                <td>2016/07/22<br> 10:24</td>
+                                <td>2016/07/22<br> 10:24</td>
+                                <td>2016/07/22<br> 10:24</td>
+                                <td>Y_TILSMJ</td>
+                                <td class="txt_org">
+                                    <i class="ui-dot"></i>
+                                    <strong class="txt_big">待回報</strong>
+                                </td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="tab2">
+                    <table class="tb_sin wid_100per">
+                        <thead>
+                            <tr>
+                                <th style="width: 55px;">工單編號/資產</th>
+                                <th style="width: 30px;"></th>
+                                <th class="wid_100px">預防保養說明</th>
+                                <th>基準日</th>
+                                <th>預計執行日</th>
+                                <th>工單執行期限</th>
+                                <th class="wid_120px">保養回報工程師</th>
+                                <th>狀態</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr class="tr1">
+                                <td class="main">
+                                    <small class="txt_gray4">母工單(3) </small>
+                                    <br/>
+                                    <span class="txt_big title_num">WO20170000013420</span>
+
+                                </td>
+                                <td>
+                                <span> <img src="../../inc/svg/minus.svg" alt="open" class="close_child" style="width: 18px;height: 18px;margin-top: 15px;"></span>
+
+                                </td>
+                                <td class="txt_gray1">
+                                        <span class="popover2">我是備註說明文字兩行超過後...</span>
+                                        <span class="more-info1">輕觸欄位跳出完整說明浮窗，再次點擊後消失輕觸欄位跳出完整說明浮窗，再次點擊後消失輕觸欄位跳出完整說明浮窗，再次點擊後消失</span>
+                                    </td>
+                                <td>2016/07/22<br> 10:24</td>
+                                <td>2016/07/22<br> 10:24</td>
+                                <td>2016/07/22<br> 10:24</td>
+                                <td>Y_TILSMJ</td>
+                                <td class="txt_green">
+                                    <i class="ui-dot"></i>
+                                    <strong class="txt_big">簽核中</strong>
+                                    
+                                </td>
+                            </tr>
+                            <tr class="tr2 WO20170000013420">
+                                <td>
+                                    <span class="spacing"></span>
+                                    <span class="txt_gray txt_big title_num">F15-ASSET100</td>
+                                <td></td>
+                                <td class="txt_gray1">
+                                        <span class="popover2">我是備註說明文字兩行超過後...</span>
+                                        <span class="more-info1">輕觸欄位跳出完整說明浮窗，再次點擊後消失輕觸欄位跳出完整說明浮窗，再次點擊後消失輕觸欄位跳出完整說明浮窗，再次點擊後消失</span>
+                                    </td>
+                                <td>2016/07/22<br> 10:24</td>
+                                <td>2016/07/22<br> 10:24</td>
+                                <td>2016/07/22<br> 10:24</td>
+                                <td>MAXADAMO</td>
+                                <td class="txt_green">
+                                    <i class="ui-dot"></i>
+                                    <strong class="txt_big">簽核中</strong>
+                                </td>
+                            </tr>
+                            <tr class="tr2 WO20170000013420">
+                                <td>
+                                    <span class="spacing"></span>
+                                    <span class="txt_gray txt_big title_num">F15-ASSET101</td>
+                                <td></td>                                        
+                                <td class="txt_gray1">
+                                        <span class="popover2">我是備註說明文字兩行超過後...</span>
+                                        <span class="more-info1">輕觸欄位跳出完整說明浮窗，再次點擊後消失輕觸欄位跳出完整說明浮窗，再次點擊後消失輕觸欄位跳出完整說明浮窗，再次點擊後消失</span>
+                                    </td>
+                                <td>2016/07/22<br> 10:24</td>                                
+                                <td>2016/07/22<br> 10:24</td>
+                                <td>2016/07/22<br> 10:24</td>
+                                <td>MAXADAMO</td>
+                                <td class="txt_green">
+                                    <i class="ui-dot"></i>
+                                    <strong class="txt_big">簽核中</strong>
+                                </td>
+                            </tr>
+                            <tr class="tr2 WO20170000013420">
+                                <td>
+                                    <span class="spacing"></span>
+                                    <span class="txt_gray txt_big title_num">F15-ASSET102</td>
+                                <td></td>
+                                <td class="txt_gray1">
+                                        <span class="popover2">我是備註說明文字兩行超過後...</span>
+                                        <span class="more-info1">輕觸欄位跳出完整說明浮窗，再次點擊後消失輕觸欄位跳出完整說明浮窗，再次點擊後消失輕觸欄位跳出完整說明浮窗，再次點擊後消失</span>
+                                    </td>
+                                <td>2016/07/22<br> 10:24</td>
+                                <td>2016/07/22<br> 10:24</td>
+                                <td>2016/07/22<br> 10:24</td>
+                                <td>MAXADAMO</td>
+                                <td class="txt_green">
+                                    <i class="ui-dot"></i>
+                                    <strong class="txt_big">簽核中</strong>
+                                    
+                                </td>
+                            </tr>
+                            <tr class="tr1">
+                                <td>
+                                    <div class="txt_big title_num">WO20170000013424</div>
+                                    <span class="spacing"></span>
+                                    <span class="txt_gray txt_big title_num">P1THC-ZERO-C01</td>
+                                <td></td>
+                                <td class="txt_gray1">
+                                        <span class="popover2">我是備註說明文字兩行超過後...</span>
+                                        <span class="more-info1">輕觸欄位跳出完整說明浮窗，再次點擊後消失輕觸欄位跳出完整說明浮窗，再次點擊後消失輕觸欄位跳出完整說明浮窗，再次點擊後消失</span>
+                                    </td>
+                                <td>2016/07/22<br> 10:24</td>                                
+                                <td>2016/07/22<br> 10:24</td>
+                                <td>2016/07/22<br> 10:24</td>
+                                <td>Y_TILSMJ</td>
+                                <td class="txt_green">
+                                    <i class="ui-dot" style="background-color: blue"></i>
+                                    <strong class="txt_big" style="color:blue;">已結案</strong>
+                                </td>
+                            </tr>
+                            <tr class="tr1 notlice">
+                                <td>
+                                    <small class="txt_gray4">PM母工單(13) </small>
+                                    <br/>
+                                    <span class="txt_big title_num">WO20170000013310</span>
+                                </td>
+                                <td></td>
+                                <td class="txt_gray1">
+                                        <span class="popover2">我是備註說明文字兩行超過後...</span>
+                                        <span class="more-info1">輕觸欄位跳出完整說明浮窗，再次點擊後消失輕觸欄位跳出完整說明浮窗，再次點擊後消失輕觸欄位跳出完整說明浮窗，再次點擊後消失</span>
+                                    </td>
+                                <td>2016/07/22<br> 10:24</td>
+                                <td>2016/07/22<br> 10:24</td>
+                                <td>2016/07/22<br> 10:24</td>
+                                <td>Y_TILSMJ</td>
+                                <td class="txt_green">
+                                    <i class="ui-dot"></i>
+                                    <strong class="txt_big">簽核中</strong>
+                                </td>
+                            </tr>
+                            <tr class="tr1">
+                                <td class="main">
+                                    <small class="txt_gray4">母工單(3) </small>
+                                    <br/>
+                                    <span class="txt_big title_num">WO20170000013311</span>
+                                </td>
+                                <td>
+                                    <span> <img src="../../inc/svg/minus.svg" alt="open" class="close_child" style="width: 18px;height: 18px; margin-top: 15px;"></span>
+                                </td>
+                                <td class="txt_gray1">
+                                        <span class="popover2">我是備註說明文字兩行超過後...</span>
+                                        <span class="more-info1">輕觸欄位跳出完整說明浮窗，再次點擊後消失輕觸欄位跳出完整說明浮窗，再次點擊後消失輕觸欄位跳出完整說明浮窗，再次點擊後消失</span>
+                                    </td>
+                                <td>2016/07/22<br> 10:24</td>                            
+                                <td>2016/07/22<br> 10:24</td>
+                                <td>2016/07/22<br> 10:24</td>
+                                <td>Y_TILSMJ</td>
+                                <td class="txt_green">
+                                    <i class="ui-dot"></i>
+                                    <strong class="txt_big">簽核中</strong>
+                                    
+                                </td>
+                            </tr>
+                            <tr class="tr2 WO20170000013311">
+                                <td>
+                                    <span class="spacing"></span>
+                                    <span class="txt_gray txt_big title_num">F15-ASSET100</td>
+                                <td></td>
+                                <td class="txt_gray1">
+                                        <span class="popover2">我是備註說明文字兩行超過後...</span>
+                                        <span class="more-info1">輕觸欄位跳出完整說明浮窗，再次點擊後消失輕觸欄位跳出完整說明浮窗，再次點擊後消失輕觸欄位跳出完整說明浮窗，再次點擊後消失</span>
+                                    </td>
+                                <td>2016/07/22<br> 10:24</td>
+                                <td>2016/07/22<br> 10:24</td>
+                                <td>2016/07/22<br> 10:24</td>
+                                <td>MAXADAMO</td>
+                                <td class="txt_green">
+                                    <i class="ui-dot"></i>
+                                    <strong class="txt_big">簽核中</strong>
+                                </td>
+                            </tr>
+                            <tr class="tr2 WO20170000013311">
+                                <td>
+                                    <span class="spacing"></span>
+                                    <span class="txt_gray txt_big title_num">F15-ASSET101</td>
+                                <td></td>
+                                <td class="txt_gray1">
+                                        <span class="popover2">我是備註說明文字兩行超過後...</span>
+                                        <span class="more-info1">輕觸欄位跳出完整說明浮窗，再次點擊後消失輕觸欄位跳出完整說明浮窗，再次點擊後消失輕觸欄位跳出完整說明浮窗，再次點擊後消失</span>
+                                    </td>
+                                <td>2016/07/22<br> 10:24</td>
+                                <td>2016/07/22<br> 10:24</td>
+                                <td>2016/07/22<br> 10:24</td>
+                                <td>MAXADAMO</td>
+                                <td class="txt_green">
+                                    <i class="ui-dot"></i>
+                                    <strong class="txt_big">簽核中</strong>
+                                </td>
+                            </tr>
+                            <tr class="tr2 WO20170000013311">
+                                <td>
+                                    <span class="spacing"></span>
+                                    <span class="txt_gray txt_big title_num">F15-ASSET102</td>
+                                <td></td>                                        
+                                <td class="txt_gray1">
+                                        <span class="popover2">我是備註說明文字兩行超過後...</span>
+                                        <span class="more-info1">輕觸欄位跳出完整說明浮窗，再次點擊後消失輕觸欄位跳出完整說明浮窗，再次點擊後消失輕觸欄位跳出完整說明浮窗，再次點擊後消失</span>
+                                    </td>
+                                <td>2016/07/22<br> 10:24</td>
+                                <td>2016/07/22<br> 10:24</td>
+                                <td>2016/07/22<br> 10:24</td>
+                                <td>MAXADAMO</td>
+                                <td class="txt_green">
+                                    <i class="ui-dot"></i>
+                                    <strong class="txt_big">簽核中</strong>
+                                    
+                                </td>
+                            </tr>
+                            <tr class="tr1">
+                                <td class="main">
+                                    <small class="txt_gray4">母工單(3) </small>
+                                    <br/>
+                                    <span class="txt_big title_num">WO20170000013312</span>
+
+                                </td>
+                                <td>
+                                    <span> <img src="../../inc/svg/minus.svg" alt="open" class="close_child" style="width: 18px;height: 18px;margin-top: 15px;"></span>
+                                </td>
+                                <td class="txt_gray1">
+                                        <span class="popover2">我是備註說明文字兩行超過後...</span>
+                                        <span class="more-info1">輕觸欄位跳出完整說明浮窗，再次點擊後消失輕觸欄位跳出完整說明浮窗，再次點擊後消失輕觸欄位跳出完整說明浮窗，再次點擊後消失</span>
+                                    </td>
+                                <td>2016/07/22<br> 10:24</td>
+                                <td>2016/07/22<br> 10:24</td>
+                                <td>2016/07/22<br> 10:24</td>
+                                <td>Y_TILSMJ</td>
+                                <td class="txt_green">
+                                    <i class="ui-dot"></i>
+                                    <strong class="txt_big">簽核中</strong>
+                                </td>
+                            </tr>
+                            <tr class="tr2 WO20170000013312">
+                                <td>
+                                    <span class="spacing"></span>
+                                    <span class="txt_gray txt_big title_num">F15-ASSET100</td>
+                                <td></td>
+                                <td class="txt_gray1">
+                                        <span class="popover2">我是備註說明文字兩行超過後...</span>
+                                        <span class="more-info1">輕觸欄位跳出完整說明浮窗，再次點擊後消失輕觸欄位跳出完整說明浮窗，再次點擊後消失輕觸欄位跳出完整說明浮窗，再次點擊後消失</span>
+                                    </td>
+                                <td>2016/07/22<br> 10:24</td>
+                                <td>2016/07/22<br> 10:24</td>
+                                <td>2016/07/22<br> 10:24</td>
+                                <td>MAXADAMO</td>
+                                <td class="txt_green">
+                                    <i class="ui-dot"></i>
+                                    <strong class="txt_big">簽核中</strong>
+                                </td>
+                            </tr>
+                            <tr class="tr2 WO20170000013312">
+                                <td>
+                                    <span class="spacing"></span>
+                                    <span class="txt_gray txt_big title_num">F15-ASSET101</td>
+                                <td></td>
+                                <td class="txt_gray1">
+                                        <span class="popover2">我是備註說明文字兩行超過後...</span>
+                                        <span class="more-info1">輕觸欄位跳出完整說明浮窗，再次點擊後消失輕觸欄位跳出完整說明浮窗，再次點擊後消失輕觸欄位跳出完整說明浮窗，再次點擊後消失</span>
+                                    </td>
+                                <td>2016/07/22<br> 10:24</td>
+                                <td>2016/07/22<br> 10:24</td>
+                                <td>2016/07/22<br> 10:24</td>
+                                <td>MAXADAMO</td>
+                                <td class="txt_green">
+                                        <i class="ui-dot"></i>
+                                        <strong class="txt_big">簽核中</strong>
+                                        
+                                </td>
+                            </tr>
+                            <tr class="tr2 WO20170000013312">
+                                <td>
+                                    <span class="spacing"></span>
+                                    <span class="txt_gray txt_big title_num">F15-ASSET102</td>
+                                <td></td>
+                                <td class="txt_gray1">
+                                        <span class="popover2">我是備註說明文字兩行超過後...</span>
+                                        <span class="more-info1">輕觸欄位跳出完整說明浮窗，再次點擊後消失輕觸欄位跳出完整說明浮窗，再次點擊後消失輕觸欄位跳出完整說明浮窗，再次點擊後消失</span>
+                                    </td>
+                                <td>2016/07/22<br> 10:24</td>
+                                <td>2016/07/22<br> 10:24</td>
+                                <td>2016/07/22<br> 10:24</td>
+                                <td>MAXADAMO</td>
+                                <td class="txt_green">
+                                    <i class="ui-dot"></i>
+                                    <strong class="txt_big">簽核中</strong>
+                                    
+                                </td>
+                            </tr>
+                            <tr class="tr1">
+                                <td>
+                                    <div class="txt_big title_num">WO20170000013424</div>
+                                    <span class="spacing"></span>
+                                    <span class="txt_gray txt_big title_num">P1THC-ZERO-C01</td>
+                                <td></td>
+                                <td class="txt_gray1">
+                                        <span class="popover2">我是備註說明文字兩行超過後...</span>
+                                        <span class="more-info1">輕觸欄位跳出完整說明浮窗，再次點擊後消失輕觸欄位跳出完整說明浮窗，再次點擊後消失輕觸欄位跳出完整說明浮窗，再次點擊後消失</span>
+                                    </td>
+                                <td>2016/07/22<br> 10:24</td>
+                                <td>2016/07/22<br> 10:24</td>
+                                <td>2016/07/22<br> 10:24</td>
+                                <td>Y_TILSMJ</td>
+                                <td class="txt_green">
+                                    <i class="ui-dot"></i>
+                                    <strong class="txt_big">簽核中</strong>
+                                    
+                                </td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="moresearch" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog dialog-sm" role="document">
+            <button type="button" class="ui-close" data-dismiss="modal" aria-label="Close"></button>
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="myModalLabel">搜尋工單</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-slogan">您可以選擇手動、語音輸入或是掃描二維條碼</div>
+                    <div class="modal-row clearfix">
+                        <input type="text" class="inp-style1 pla_ct col-sm-11 d6" placeholder="輸入資產編號" />
+                        <div>
+                            <button class="col-sm-1 ui-scan"></button>
+                            <input type="file" id="scan2" accept="image/*" capture="environment" style="display: none;">
+                        </div>
+                    </div>
+                    <div class="modal-row clearfix">
+                        <input type="text" class="inp-style1 pla_ct col-sm-11 d1" placeholder="輸入工單編號" />
+                    </div>
+                    <div class="modal-row clearfix">
+                        <input type="text" class="inp-style1 pla_ct col-sm-11 d2" placeholder="輸入預防保養說明" />
+                    </div>
+                    <div class="modal-row clearfix">
+                        <input type="date" class="inp-style1 pla_ct col-sm-11 d3" placeholder="選擇預計執行日" />
+                    </div>
+                    <div class="modal-row clearfix">
+                        <input type="text" class="inp-style1 pla_ct col-sm-11 d4" placeholder="選擇工單執行期限" />
+                    </div>
+                    <div class="modal-row clearfix">
+                        <input type="text" class="inp-style1 pla_ct col-sm-11 d5" placeholder="輸入回報保養工程師" />
+                    </div>
+
+                </div>
+
+                <div class="modal-footer col-sm-11">
+                    <button type="button"  class="clear_data submit_btn wid_180px" style="position: relative; left: -50px;" >清除</button>
+                    <button type="button" data-dismiss="modal" class="submit_btn wid_180px" style="position: relative; left: -20px;">查詢</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal -->
+
+
+
+
+
+
+</body>
+
+</html>

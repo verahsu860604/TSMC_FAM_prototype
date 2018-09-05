@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="19px" viewBox="0 0 20 19" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>Search</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.5">
+        <g id="Icon/Search" transform="translate(-12.000000, -13.000000)" stroke="#000000" stroke-width="2">
+            <g id="Search" transform="translate(13.000000, 14.000000)">
+                <path d="M13.7801936,6.82351859 C13.7801936,10.4286571 10.7616344,13.3503625 7.03698641,13.3503625 C3.31233843,13.3503625 0.293779181,10.4286571 0.293779181,6.82351859 C0.293779181,3.21838012 3.31233843,0.296674721 7.03698641,0.296674721 C10.7616344,0.296674721 13.7801936,3.21838012 13.7801936,6.82351859 Z" id="Stroke-1"></path>
+                <path d="M11.9280018,10.9714398 L17.5,16.5" id="Stroke-3"></path>
+            </g>
+        </g>
+    </g>
+</svg>

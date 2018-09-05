@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TSMC SAMPLE PAGE</title>
+    <script src="../../inc/js/jquery-3.3.1.min.js"></script>
+    <script src="../../inc/js/bootstrap.min.js"></script>
+    <script src="../dist/bundle.js"></script>
+    <script src="../../inc/js/index.js"></script>
+    <link rel="stylesheet" href="../../inc/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../inc/css/base.css">
+    <link rel="stylesheet" href="../../inc/css/layout.css">
+    <link rel="stylesheet" href="../../inc/css/form.css">
+    <link rel="stylesheet" href="../../inc/css/comm.css">
+</head>
+
+<body>
+    <h1 class="page-title">SAMPLE PAGE</h1>
+    <div class="mask-layout">
+        <div class="mask-block">
+            <div class="mask-icon"></div>
+            <p class="mask-txt">載入中</p>
+        </div>
+    </div>
+    <div class="container">
+        <h1>頁首</h1>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="detail-page-head">
+                    <a href="../html/search_list.html" class="col-sm-1">
+                        <i class="ui-prev"></i>
+                    </a>
+                    <h1 class="col-sm-8">
+                        <span class="detail-page-title">WO20170000013424</span>
+                        <span class="txt_small txt_org">
+                            <i class="ui-dot"></i>待回報</span>
+                    </h1>
+                    <div class="btn-box float-r">
+                        <button class="submit_btn1 txt_red" id="save_btn">儲存</button>
+                        <button class="submit_btn1 txt_red" data-toggle="modal" data-target="#modal_error">呈核</button>
+                    </div>
+                </div>
+        
+            </div>
+        </div>
+        <h1>查詢輸入</h1>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="head-searchbox">
+                    <div class="search-content">
+                        <div class="search_cal col-sm-11">
+                            <i class="ui-search-trigger col-sm-1"></i>
+                            <div>
+                                <div class="more_search" style="display: none">
+                                    <span class="txt"></span>
+                                    <span class="cross">X</span>
+                                </div>
+                                <input type="text" class="ui-search col-sm-11 pla_ct" placeholder="請輸入或掃描設備編號條碼進行查詢" />
+                            </div>
+        
+                        </div>
+                        <div>
+                            <button class="search-scan col-sm-1"></button>
+                            <input type="file" id="scan1" accept="image/*" capture="environment" style="display: none;">
+                        </div>
+                    </div>
+                    <a href="#" data-toggle="modal" data-target="#moresearch" class="link_red1">進階查詢</a>
+                </div>
+            </div>
+        </div>
+        <h1>切換tab</h1>
+        <div class="row">
+            <div class="col-sm-12">
+                <div id="menu">
+                    <nav class="nav_mega_menu txt_lt">
+                        <ul class="tablist" role="tablist">
+                            <li class="active">
+                                <a href="#tab1" data-toggle="tab">保養作業程序</a>
+                            </li>
+                            <li>
+                                <a href="#tab2" data-toggle="tab">材料</a>
+                            </li>
+                            <li>
+                                <a href="#tab3" data-toggle="tab">人力</a>
+                            </li>
+                            <li>
+                                <a href="#tab4" data-toggle="tab">工具</a>
+                            </li>
+                            <li>
+                                <a href="#tab5" data-toggle="tab">核簽紀錄</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <h1>切換tab-2</h1>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="nav-list txt_ct mar_b15px">
+                    <!-- <ul class="nav-tabs2 wid_50per" role="tablist">
+                        <li role="presentation" class="active wid_50per">
+                            <a href="#tab1" data-toggle="tab">待完成 (16)</a>
+                        </li>
+                        <li role="presentation" class="wid_50per">
+                            <a href="#tab2" data-toggle="tab">簽核中 (16)</a>
+                        </li>
+                    </ul> -->
+                    <div class="extend-table">
+                        <span class="txt_gray">展開工單</span>
+                        <input type="checkbox" name="" id="switch">
+                        <label for="switch" id="switchDot"></label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h1>列表</h1>
+        <div class="row">
+            <div class="col-sm-12">
+                <table class="tb_sin wid_100per">
+                    <thead>
+                        <tr>
+                            <th>工單編號/資產</th>
+                            <th class="wid_100px">預防保養說明</th>
+                            <th>預計執行日</th>
+                            <th>狀態</th>
+                            <th class="wid_120px">狀態</th>
+                            <th>狀態</th>
+                        </tr>
+                    </thead>
+                
+                    <tbody>
+                        <tr class="tr1" onclick="location.href='../html/search_detail-1.html'">
+                            <td>
+                                <small class="txt_gray4">母工單(3) </small>
+                                <br/>
+                                <span class="txt_big">WO20170000013420</span>
+                            </td>
+                            <td class="txt_gray1">我是備註說明文字兩行超過後...</td>
+                            <td>2016/07/22
+                                <br> 10:24</td>
+                            <td class="txt_gray3">
+                                <i class="ui-dot"></i>
+                                <strong class="txt_big">已回報</strong>
+                            </td>
+                            <td class="txt_green">
+                                <i class="ui-dot"></i>
+                                <strong class="txt_big">簽核中</strong>
+                            </td>
+                            <td class="txt_org">
+                                <i class="ui-dot"></i>
+                                <strong class="txt_big">待回報</strong>
+                            </td>
+                        </tr>
+                        <tr class="tr2">
+                            <td>
+                                <span class="spacing"></span>
+                                <span class="txt_gray txt_big">F15-ASSET100</td>
+                            <td class="txt_gray1">我是備註說明文字兩行超過後...</td>
+                            <td>2016/07/22
+                                <br> 10:24</td>
+                            <td class="txt_gray3">
+                                <i class="ui-dot"></i>
+                                <strong class="txt_big">已回報</strong>
+                            </td>
+                            <td class="txt_green">
+                                <i class="ui-dot"></i>
+                                <strong class="txt_big">簽核中</strong>
+                            </td>
+                            <td class="txt_org">
+                                <i class="ui-dot"></i>
+                                <strong class="txt_big">待回報</strong>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <h1>表格</h1>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="tb_sin2">
+                    <div class="detail-contact-head">
+                        <div class="mar_b15px clearfix">
+                            <span class="detail-page-title1 col-sm-6">項目 (共12筆)</span>
+                            <span class="col-sm-6">
+                                <button data-toggle="modal" data-target="#modal_change_all_no" class="submit_btn2  float-r">全
+                                    <i class="ui-close"></i>
+                                </button>
+                                <button data-toggle="modal" data-target="#modal_change_all_ok" class="submit_btn2 mar_r10px float-r">全
+                                    <i class="ui-check"></i>
+                                </button>
+                                <button data-target="#modal_choose_material" data-toggle="modal" class="submit_btn2 mar_r10px float-r">
+                                    <i class="ui-add"></i>選取計劃用料</button>
+                                
+                            </span>
+                        </div>
+                    </div>
+                    <table class="wid_100per">
+                        <thead>
+                            <tr>
+                                <th>序號</th>
+                                <th>作業程序與檢查重點</th>
+                                <th>作業規格</th>
+                                <th>結果</th>
+                                <th>測量值</th>
+                                <th>備註</th>
+                            </tr>
+                        </thead>
+                    
+                        <tbody>
+                            <tr>
+                                <td>10</td>
+                                <td class="td_note max_wid_100px">工具與材料準備： 活動板手，螺絲起子，三角錐</td>
+                                <td>完成準備:V</td>
+                                <td>
+                                    <div class="radio-grp">
+                                        <label class="radio_box">
+                                            <input type="radio" name="radio1">
+                                            <div class="radio_icon ok"></div>
+                                        </label>
+                                        <label class="radio_box">
+                                            <input type="radio" name="radio1">
+                                            <div class="radio_icon no"></div>
+                                        </label>
+                                        <label class="radio_box">
+                                            <input type="radio" name="radio1">
+                                            <div class="radio_icon na"></div>
+                                        </label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <input type="text" class="inp-style2 focus wid_80px" pattern="[0-9]*" inputmode="numeric" placeholder="(必填)">
+                                </td>
+                                <td>
+                                    <input type="text" class="inp-style2 focus wid_80px" placeholder="(選填)">
+                                </td>
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                    <table class="wid_100per">
+                        <thead>
+                            <tr>
+                                <th>料號</th>
+                                <th>料號說明</th>
+                                <th>領料數量</th>
+                                <th class="wid_80px">實際使用數量</th>
+                                <th class="wid_80px">備註</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>APPAFB01-0302</td>
+                                <td class="td_note max_wid_100px">料號說明料號說明料號說明料號說明料號說明料號說明</td>
+                                <td>10000</td>
+                                <td>
+                                    <input type="text" class="inp-style2 focus" pattern="[0-9]*" inputmode="numeric" placeholder="(必填)">
+                                </td>
+                                <td>
+                                    <input type="text" class="inp-style2 focus" placeholder="(選填)">
+                                </td>
+                                <td class="txt_ct">
+                                    <button class="btn_org"></button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="wid_100per">
+                        <thead>
+                            <tr>
+                                <th>狀態</th>
+                                <th>單位</th>
+                                <th>課別名稱</th>
+                                <th>姓名</th>
+                                <th>開始日期</th>
+                                <th>核簽日期</th>
+                                <th>意見</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="view">
+                                <td class="txt_ct">
+                                    <span class="status_green_ok"></span>
+                                </td>
+                                <td>00203V03</td>
+                                <td>機械一課</td>
+                                <td>廠商-XXX</td>
+                                <td>2018/05/22 02:44</td>
+                                <td>2018/05/22 10:09</td>
+                                <td class="td_note max_wid_100px">說明文字說明文字說明文字說明文字說明文字說明文字說明文字</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+    
+    <!-- Modal -->
+    
+    <!-- 呈核跳窗 -->
+    <div class="modal fade" id="modal_submit" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="ui-close dark" data-dismiss="modal" aria-label="Close"></button>
+                    <h4 class="modal-title" id="myModalLabel">呈核</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-slogan">完成工作流程設定</div>
+                    <div class="modal-txt">
+                        <p>作業：請您執行-說明:F-CCH-01-03-013 P529 F6B-Slurry System…</p>
+                    </div>
+                    <div class="modal-row clearfix">
+                        <textarea name="" id="" cols="30" rows="10" class="col-sm-12" placeholder="輸入簽核意見"></textarea>
+                    </div>
+                    <div class="btn-grp modal-row">
+                        <button type="button" class="submit_btn mar_b15px" data-dismiss="modal">呈核</button>
+                        <button type="button" class="submit_btn cancel">取消</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    <!-- 訊息跳窗 -->
+    <div class="modal fade" id="modal_change_all_ok" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+    
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="ui-close dark" data-dismiss="modal" aria-label="Close"></button>
+                    <h4 class="modal-title" id="myModalLabel">確認訊息</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-slogan">將全部工作單狀態變更為已完成？</div>
+                    <div class="btn-grp modal-row">
+                        <button type="button" data-dismiss="modal" class="submit_btn mar_b15px" id="checkAllOk">確定</button>
+                        <button type="button" data-dismiss="modal" class="submit_btn cancel">取消</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- 訊息跳窗 -->
+    <div class="modal fade" id="modal_change_all_no" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+    
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="ui-close dark" data-dismiss="modal" aria-label="Close"></button>
+                    <h4 class="modal-title" id="myModalLabel">確認訊息</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-slogan">將全部工作單狀態變更為未完成？</div>
+                    <div class="btn-grp modal-row">
+                        <button type="button" data-dismiss="modal" class="submit_btn mar_b15px" id="checkAllNo">確定</button>
+                        <button type="button" data-dismiss="modal" class="submit_btn cancel">取消</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- 錯誤訊息跳窗 -->
+    <div class="modal fade" id="modal_error" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+    
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="ui-close dark" data-dismiss="modal" aria-label="Close"></button>
+                    <h4 class="modal-title" id="myModalLabel">錯誤訊息</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-slogan">未填寫人力回報，請重新確認</div>
+                    <div class="btn-grp modal-row">
+                        <button type="button" data-dismiss="modal" data-target="#modal_submit" data-toggle="modal" class="submit_btn mar_b15px">確定</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- 選取計劃用料跳窗 -->
+    <div class="modal fade" id="modal_choose_material" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+    
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="ui-close dark" data-dismiss="modal" aria-label="Close"></button>
+                    <h4 class="modal-title" id="myModalLabel">選取計畫用料</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="head-searchbox">
+                        <div class="search-content row">
+                            <div class="search_cal col-sm-11">
+                                <i class="ui-search-trigger col-sm-1"></i>
+                                <input type="text" class="ui-search col-sm-11 pla_ct" placeholder="請輸入或掃描設備編號條碼進行查詢" />
+                            </div>
+                            <div>
+                                <button class="search-scan col-sm-1"></button>
+                                <input type="file" id="scan1" accept="image/*" capture="environment" style="display: none;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tb_sin2">
+                        <table class="wid_100per">
+                            <thead>
+                                <tr>
+                                    <th class="txt_ct">
+                                        <label class="checkbox">
+                                            <input type="checkbox" name="checkboxAll" id="checkboxAll">
+                                            <div class="checkbox-box"></div>
+                                        </label>
+                                    </th>
+                                    <th>料號</th>
+                                    <th>料號說明</th>
+                                    <th>領料數量</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="txt_ct">
+                                        <label class="checkbox">
+                                            <input type="checkbox" name="checkboxSingle">
+                                            <div class="checkbox-box"></div>
+                                        </label>
+                                    </td>
+                                    <td>APPAFB01-0302</td>
+                                    <td class="td_note max_wid_100px">說明文字說明文字說明文字說明文字說明文字說明文字說明文字</td>
+                                    <td>10000</td>
+                                </tr>
+                                <tr>
+                                    <td class="txt_ct">
+                                        <label class="checkbox">
+                                            <input type="checkbox" name="checkboxSingle">
+                                            <div class="checkbox-box"></div>
+                                        </label>
+                                    </td>
+                                    <td>APPAFB01-0302</td>
+                                    <td class="td_note max_wid_100px">說明文字說明文字說明文字說明文字說明文字說明文字說明文字</td>
+                                    <td>10000</td>
+                                </tr>
+                                <tr>
+                                    <td class="txt_ct">
+                                        <label class="checkbox">
+                                            <input type="checkbox" name="checkboxSingle">
+                                            <div class="checkbox-box"></div>
+                                        </label>
+                                    </td>
+                                    <td>APPAFB01-0302</td>
+                                    <td class="td_note max_wid_100px">說明文字說明文字說明文字說明文字說明文字說明文字說明文字</td>
+                                    <td>10000</td>
+                                </tr>
+                            </tbody>
+                        </table>
+    
+                    </div>
+                    <div class="btn-grp modal-row">
+                        <button type="button" data-dismiss="modal" class="submit_btn mar_b15px">確定</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 選取計畫人力跳窗 -->
+    <div class="modal fade" id="modal_choose_ppl" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+    
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="ui-close dark" data-dismiss="modal" aria-label="Close"></button>
+                    <h4 class="modal-title" id="myModalLabel">選取計畫人力</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="head-searchbox">
+                        <div class="search-content row">
+                            <div class="search_cal col-sm-11">
+                                <i class="ui-search-trigger col-sm-1"></i>
+                                <input type="text" class="ui-search col-sm-11 pla_ct" placeholder="請輸入或掃描設備編號條碼進行查詢" />
+                            </div>
+                            <button class="search-scan col-sm-1"></button>
+                        </div>
+                    </div>
+                    <div class="tb_sin2">
+                        <table class="wid_100per">
+                            <thead>
+                                <tr>
+                                    <th class="txt_ct">
+                                        <label class="checkbox">
+                                            <input type="checkbox" name="checkboxAll">
+                                            <div class="checkbox-box"></div>
+                                        </label>
+                                    </th>
+                                    <th>人力</th>
+                                    <th>姓名</th>
+                                    <th>工時</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="txt_ct">
+                                        <label class="checkbox">
+                                            <input type="checkbox" name="checkboxSingle">
+                                            <div class="checkbox-box"></div>
+                                        </label>
+                                    </td>
+                                    <td>B9439680</td>
+                                    <td>廠商-XXX</td>
+                                    <td>8.0</td>
+                                </tr>
+                                <tr>
+                                    <td class="txt_ct">
+                                        <label class="checkbox">
+                                            <input type="checkbox" name="checkboxSingle">
+                                            <div class="checkbox-box"></div>
+                                        </label>
+                                    </td>
+                                    <td>APPAFB01-0302</td>
+                                    <td>廠商-XXX</td>
+                                    <td>8.0</td>
+                                </tr>
+                                <tr>
+                                    <td class="txt_ct">
+                                        <label class="checkbox">
+                                            <input type="checkbox" name="checkboxSingle">
+                                            <div class="checkbox-box"></div>
+                                        </label>
+                                    </td>
+                                    <td>APPAFB01-0302</td>
+                                    <td>廠商-XXX</td>
+                                    <td>8.0</td>
+                                </tr>
+                            </tbody>
+                        </table>
+    
+                    </div>
+                    <div class="btn-grp modal-row">
+                        <button type="button" data-dismiss="modal" class="submit_btn mar_b15px">確定</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 選取計劃工具跳窗 -->
+    <div class="modal fade" id="modal_choose_tool" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+    
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="ui-close dark" data-dismiss="modal" aria-label="Close"></button>
+                    <h4 class="modal-title" id="myModalLabel">選取計畫工具</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="head-searchbox">
+                        <div class="search-content row">
+                            <div class="search_cal col-sm-11">
+                                <i class="ui-search-trigger col-sm-1"></i>
+                                <input type="text" class="ui-search col-sm-11 pla_ct" placeholder="請輸入或掃描設備編號條碼進行查詢" />
+                            </div>
+                            <button class="search-scan col-sm-1"></button>
+                        </div>
+                        <div class="tb_sin2">
+                            <table class="wid_100per">
+                                <tr>
+                                    <th class="txt_ct">
+                                        <label class="checkbox">
+                                            <input type="checkbox" name="checkboxAll">
+                                            <div class="checkbox-box"></div>
+                                        </label>
+                                    </th>
+                                    <th>工具種類</th>
+                                    <th>工具類別</th>
+                                </tr>
+                                <tr>
+                                    <td class="txt_ct">
+                                        <label class="checkbox">
+                                            <input type="checkbox" name="checkboxSingle">
+                                            <div class="checkbox-box"></div>
+                                        </label>
+                                    </td>
+                                    <td>廠商校驗-0302</td>
+                                    <td>電表-三用電錶</td>
+                                </tr>
+                            </table>
+    
+                        </div>
+    
+                    </div>
+                    <div class="btn-grp modal-row">
+                        <button type="button" data-dismiss="modal" class="submit_btn mar_b15px">確定</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 挑選工具跳窗 -->
+    <div class="modal fade" id="modal_pick_tool" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+    
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="ui-close dark" data-dismiss="modal" aria-label="Close"></button>
+                    <h4 class="modal-title" id="myModalLabel">挑選工具</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="tb_sin2">
+                        <table class="wid_100per">
+                            <thead>
+                                <tr>
+                                    <th class="txt_ct">
+                                    </th>
+                                    <th>序號</th>
+                                    <th>工儀器名稱</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="txt_ct">
+                                        <label class="radio-circle">
+                                            <input type="radio" name="radio-circle">
+                                            <div class="circle-box"></div>
+                                        </label>
+                                    </td>
+                                    <td>25813028</td>
+                                    <td>F15P1/2 三用電錶</td>
+                                </tr>
+                                <tr>
+                                    <td class="txt_ct">
+                                        <label class="radio-circle">
+                                            <input type="radio" name="radio-circle">
+                                            <div class="circle-box"></div>
+                                        </label>
+                                    </td>
+                                    <td>25813028</td>
+                                    <td>F15P1/2 三用電錶</td>
+                                </tr>
+                                <tr>
+                                    <td class="txt_ct">
+                                        <label class="radio-circle">
+                                            <input type="radio" name="radio-circle">
+                                            <div class="circle-box"></div>
+                                        </label>
+                                    </td>
+                                    <td>25813028</td>
+                                    <td>F15P1/2 三用電錶</td>
+                                </tr>
+                            </tbody>
+                        </table>
+    
+                    </div>
+                    <div class="btn-grp modal-row">
+                        <button type="button" data-dismiss="modal" class="submit_btn mar_b15px">確定</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 進階搜尋跳窗 -->
+    <div class="modal fade" id="moresearch" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog dialog-sm" role="document">
+            <button type="button" class="ui-close" data-dismiss="modal" aria-label="Close"></button>
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="myModalLabel">搜尋工單</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-slogan">您可以選擇手動、語音輸入或是掃描二維條碼</div>
+                    <div class="modal-row clearfix">
+                        <input type="text" class="inp-style1 pla_ct col-sm-11" placeholder="輸入資產編號" />
+                        <div>
+                            <button class="col-sm-1 ui-scan"></button>
+                            <input type="file" id="scan2" accept="image/*" capture="environment" style="display: none;">
+                        </div>
+                    </div>
+                    <div class="modal-row clearfix">
+                        <input type="text" class="inp-style1 pla_ct col-sm-11" placeholder="輸入工單編號" />
+                    </div>
+                    <div class="modal-row clearfix">
+                        <input type="text" class="inp-style1 pla_ct col-sm-11" placeholder="輸入預防保養說明" />
+                    </div>
+                    <div class="modal-row clearfix">
+                        <input type="date" class="inp-style1 pla_ct col-sm-11" placeholder="選擇預計執行日" />
+                    </div>
+                    <div class="modal-row clearfix">
+                        <input type="text" class="inp-style1 pla_ct col-sm-11" placeholder="選擇工單執行期限" />
+                    </div>
+                    <div class="modal-row clearfix">
+                        <input type="text" class="inp-style1 pla_ct col-sm-11" placeholder="輸入回報保養工程師" />
+                    </div>
+    
+                </div>
+    
+                <div class="modal-footer col-sm-11">
+                    <button type="button" data-dismiss="modal" class="submit_btn wid_100per">查詢</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal -->
+
+
+</body>
+</html>

@@ -1,0 +1,66 @@
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+form,
+fieldset,
+input,
+select,
+textarea,
+p,
+blockquote,
+th,
+td {
+    margin: 0;
+    padding: 0;
+    font-family:'Arial',Microsoft JhengHei,'Roboto', 'sans-serif', 'NotoSansCJKtc';
+	/*firefox英文數字問題*/
+    font-weight: normal;
+    color:#000;
+    font-size: 16px;
+    line-height: normal;
+    letter-spacing: 0.5px;
+    -webkit-text-size-adjust: none;
+    /*解決Chrome 12px以下字級*/
+}
+td {
+    table-layout: fixed;
+    word-wrap: break-word;
+}
+input[type=text],
+input[type=password],
+input[type=tel],
+input[type=number] {
+    box-shadow: none;
+    outline: 0;
+    display: inline-block;
+    background-color: transparent;
+    border: none;
+}
+button{border:none;background-color: transparent; outline: none;}
+
+button:focus,
+textarea:focus {
+    outline: none;
+}
+a:hover{text-decoration: none;}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-color: #f2f2f2;
+}
+body.fixed {
+    overflow-y: hidden;
+}
