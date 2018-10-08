@@ -1,0 +1,1243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TSMC 查詢內容</title>
+    <script src="../../inc/js/jquery-3.3.1.min.js"></script>
+    <script src="../../inc/js/bootstrap.min.js"></script>
+    <script src="../dist/bundle.js"></script>
+    <!-- <script src="../../inc/js/index.js"></script> -->
+    <script src="../../inc/js/action.js"></script>
+    <script src="../../inc/js/base.js"></script>
+    <link rel="stylesheet" href="../../inc/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../inc/css/base.css">
+    <link rel="stylesheet" href="../../inc/css/layout.css">
+    <link rel="stylesheet" href="../../inc/css/form.css">
+    <link rel="stylesheet" href="../../inc/css/comm.css">
+    <!-- font awesome icon for toggl up arrow -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="mask-layout">
+        <div class="mask-block">
+            <div class="mask-icon"></div>
+            <p class="mask-txt">載入中</p>
+        </div>
+    </div>
+
+    <div id="header">
+        <div class="detail-page-head">
+            <a href="../../html/stock/search_list.html" class="col-sm-3">
+                <i class="ui-prev"></i>
+            </a>
+            <h1 class="col-sm-6" style="text-align: center;">
+                <span class="txt_small txt_org"><i class="ui-dot"></i>確認 &nbsp;</span>
+                <span class="detail-page-title">RE10700014</span>
+                <span class="txt_small txt_org openNclose"><i class="fa fa-angle-up" style="font-size: 30px;"></i> &nbsp;收合</span>
+            </h1>
+            <div class="btn-box col-sm-3">
+                <button class="submit_btn1 txt_red float-r " data-toggle="modal" data-target="#modal_success">結案</button>
+                <button class="submit_btn1 txt_red float-r" id="save_btn">儲存</button>
+                
+            </div>
+        </div>
+        <table class="tb_sin1 wid_100per">
+            <tr>
+                <td class="hd" width="18%">申請單類型</td>
+                <td width="28%">RE 02.採購入庫 (+)</td>
+                <td class="hd" width="20%">開單日期</td>
+                <td>2018/09/19</td>
+            </tr>
+            <tr>
+                <td class="hd" width="18%">廠區</td>
+                <td>F15</td>
+                <td class="hd" width="18%">申請人</td>
+                <td width="32%">Y_FUYI吳大才</td>
+            </tr>
+            <tr>
+                <td class="hd">倉庫</td>
+                <td>
+                    中科廠務庫房
+                </td>
+                <td class="hd">申請部門</td>
+                <td>
+                    00203109 &nbsp; 廠務庫房-管理課
+                </td>
+            </tr>
+            <tr>
+                <td class="hd"><span class="txt_red"> *配送地點</span></td>
+                <td>
+                    <select class="inp-style3" style="width: 115px;">
+                        <option value="">F15BP6CUP</option>
+                        <option value="">F15BP6CUP</option>
+                        <option value="">F15BP6CUP</option>
+                    </select>
+                </td>
+                <td class="hd">庫房處理人員</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="hd">預計日期</td>
+                <td>2018/09/19</td>
+                <td class="hd">庫房管理員(結案人)</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="hd">需求單位</td>
+                <td>00203109 &nbsp; 廠務庫房-管理課</td>
+                <td class="hd">廠商</td>
+                <td>xxx</td>
+            </tr>
+            <tr>
+                <td class="hd">公司帳料件</td>
+                <td>N</td>
+                <td class="hd">實際領退料人(電子簽名)</td>
+                <td><input type="text" class="inp-style2" value="" placeholder="xxx"></td>
+            </tr>
+            <tr>
+                <td class="hd">採購單號(PO)</td>
+                <td>xxx</td>
+                <td class="hd">簽收時間(電子簽名)</td>
+                <td>2018/10/05 17:10</td>
+            </tr>
+            <tr>
+                    <td class="hd">採購申請單號(MR)</td>
+                    <td>xxx</td>
+                    <td class="hd"></td>
+                    <td></td>
+                </tr>
+            
+        </table>
+        <div>
+
+        </div>
+        <div id="menu">
+            <nav class="nav_mega_menu txt_lt">
+                <ul role="tablist">
+                    <li class="active">
+                        <a href="#tab1" data-toggle="tab">異動明細</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <div class="wrapper-size">
+        <div class="tab-content">
+            <div class="tab-pane active" id="tab1">
+                <div class="tb_sin2 tb_sin4" style="margin-top: 165px;">
+                    <div class=" detail-contact-head">
+                    <div class="clearfix mar_b10px">
+                        <span class="detail-page-title1" style="padding-left: 15px;">項目(共5筆) &nbsp; &nbsp; </span>
+                        <span class="detail-page-title1">料號 &nbsp; <input type="text" class="inp-style2" value=""
+                                placeholder="xxx" style="width:100px"><button class="search-scan1"></button></span>
+                        <span class="detail-page-title1">櫃位 &nbsp; <input type="text" class="inp-style2" value=""
+                                placeholder="xxx" style="width:100px"><button class="search-scan1"></button></span>
+                        <span><button class="submit_btn3">過濾</button></span>
+                    </div>
+                    <!-- <div class="mar_b15px clearfix">
+                            <span class="col-sm-6">
+                                <input type="date" class="pla_ct inp-style1 wid_100per" value="2018-01-01" placeholder="實際保養開始時間">
+                            </span>
+                            <span class="col-sm-6">
+                                <input type="date" class="pla_ct inp-style1 wid_100per" value="2018-01-01" placeholder="實際保養結束時間">
+                            </span>
+                        </div> -->
+                </div>
+                <table class="wid_100per">
+                    <thead>
+                        <tr>
+                            <th >行號</th>
+                            <th ></th>
+                            <th>料號說明</th>
+                            <th>實際數量</th>
+                            <th>實際櫃位</th>
+                            <th>實際櫃位說明<br>實際櫃位課別</th>
+                            <th>狀況碼 <br> 批號</th>
+                            <th>供應商<br>說明</th>
+                            <th>發料單位</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td class="txt_ct" width="4%">1</td>
+                            <td class="txt_org expand" width="1%"><i class="fa fa-angle-down" style="font-size: 30px;"></i></td>
+                            <td width="9%">item1<br>XXXXX...</td>
+                            <td width="5%">
+                                <input type="text" class="inp-style2 focus wid_50px" value="1">
+                            </td>
+                            <td width="5%">
+                                <select class="inp-style3">
+                                    <option value="1">SAP_01</option>
+                                    <option value="2">SAP_02</option>
+                                    <option value="3">SAP_03</option>
+                                </select>
+                                <button class="search-scan1"></button>
+                            </td>
+                            <td width="17%">
+                                XXXXXXX <br> 公司帳櫃位...
+                            </td>
+                            <td width="11%">NEW<br>XXXXXX</td>
+                            <td width="11%">V 6637 <br> XX廠商</td>
+                            <td width="10%">xxxxx</td>
+                            <td class="txt_org more" width="5%"><span style="display:inline-block;">more...</span>
+                                    <span class="more-info2" >成本中心代碼 ： ＸＸＸＸＸＸ<br>
+                                            安全庫存量 ： ＸＸＸＸＸ<br>
+                                            計畫數量 ： ＸＸＸＸＸＸ<br>
+                                            計畫櫃位 ： ＸＸＸＸＸ<br>
+                                            計畫櫃位說明 ： ＸＸＸＸＸＸ<br>
+                                            計畫櫃位課別 ： ＸＸＸＸＸＸ<br>
+                                            ASN Vendor No ： ＸＸＸＸＸ<br>
+                                            ASN Item No ： ＸＸＸＸＸ<br>
+                                            PO No ： ＸＸＸＸＸ<br>
+                                            PO Item No ： ＸＸＸＸＸＸＸ<br> </span>
+                            </td>
+
+                        </tr>
+                        <tr class="tchild1 " style="display: none;">
+                                <td colspan="1"></td>
+                                <td colspan="9">供單料件細項合併明細</td>
+                            </tr>
+                            <tr class="tchild1" style="display: none;"> 
+                                <th colspan="1"></th>
+                                <th colspan="3">計畫數量</th>
+                                <th colspan="3">實際數量</th>
+                                <th colspan="4">供單料件</th>
+                            </tr>
+                            <tr class="tchild1 " style="display: none;">
+                                <td colspan="1"></td>
+                                <td colspan="3">3</td>
+                                <td colspan="3"><input type="text" class="inp-style2 focus wid_50px" value="1"></td>
+                                <td colspan="4">woitem124</td>
+                            </tr>
+                        <tr>
+                        <tr>
+                            <td class="txt_ct">2</td>
+                            <td class="txt_org expand"><i class="fa fa-angle-down" style="font-size: 30px;"></i></td>
+                            <td>item1<br>XXXXX...</td>
+                            <td>
+                                <input type="text" class="inp-style2 focus wid_50px" value="1">
+                            </td>
+                            <td>
+                                <select class="inp-style3">
+                                    <option value="1">SAP_01</option>
+                                    <option value="2">SAP_02</option>
+                                    <option value="3">SAP_03</option>
+                                </select>
+                                <button class="search-scan1"></button>
+                            </td>
+                            <td>
+                                XXXXXXX <br> 公司帳櫃位...
+                            </td>
+                            <td>NEW<br>XXXXXX</td>
+                            <td>V 6637 <br> XX廠商</td>
+                            <td>xxxxx</td>
+                            <td class="txt_org more" width="5%"><span style="display:inline-block;">more...</span>
+                                    <span class="more-info2" >成本中心代碼 ： ＸＸＸＸＸＸ<br>
+                                            安全庫存量 ： ＸＸＸＸＸ<br>
+                                            計畫數量 ： ＸＸＸＸＸＸ<br>
+                                            計畫櫃位 ： ＸＸＸＸＸ<br>
+                                            計畫櫃位說明 ： ＸＸＸＸＸＸ<br>
+                                            計畫櫃位課別 ： ＸＸＸＸＸＸ<br>
+                                            ASN Vendor No ： ＸＸＸＸＸ<br>
+                                            ASN Item No ： ＸＸＸＸＸ<br>
+                                            PO No ： ＸＸＸＸＸ<br>
+                                            PO Item No ： ＸＸＸＸＸＸＸ<br> </span>
+                            </td>
+                        </tr>
+                        <tr class="tchild2 " style="display: none;">
+                            <td colspan="1"></td>
+                            <td colspan="9">供單料件細項合併明細</td>
+                        </tr>
+                        <tr class="tchild2 " style="display: none;"> 
+                            <th colspan="1"></th>
+                            <th colspan="3">計畫數量</th>
+                            <th colspan="3">實際數量</th>
+                            <th colspan="4">供單料件</th>
+                        </tr>
+                        <tr class="tchild2 " style="display: none;">
+                            <td colspan="1"></td>
+                            <td colspan="3">3</td>
+                            <td colspan="3"><input type="text" class="inp-style2 focus wid_50px" value="1"></td>
+                            <td colspan="4">woitem124</td>
+                        </tr>
+                        <tr>
+                            <td class="txt_ct">3</td>
+                            <td class="txt_org expand"><i class="fa fa-angle-down" style="font-size: 30px;"></i></td>
+                            <td>item1<br>XXXXX...</td>
+                            <td>
+                                <input type="text" class="inp-style2 focus wid_50px" value="1">
+                            </td>
+                            <td>
+                                <select class="inp-style3">
+                                    <option value="1">SAP_01</option>
+                                    <option value="2">SAP_02</option>
+                                    <option value="3">SAP_03</option>
+                                </select>
+                                <button class="search-scan1"></button>
+                            </td>
+                            <td>
+                                XXXXXXX <br> 公司帳櫃位...
+                            </td>
+                            <td>NEW<br>XXXXXX</td>
+                            <td>V 6637 <br> XX廠商</td>
+                            <td>xxxxx</td>
+                            <td class="txt_org more" width="5%"><span style="display:inline-block;">more...</span>
+                                    <span class="more-info2" >成本中心代碼 ： ＸＸＸＸＸＸ<br>
+                                            安全庫存量 ： ＸＸＸＸＸ<br>
+                                            計畫數量 ： ＸＸＸＸＸＸ<br>
+                                            計畫櫃位 ： ＸＸＸＸＸ<br>
+                                            計畫櫃位說明 ： ＸＸＸＸＸＸ<br>
+                                            計畫櫃位課別 ： ＸＸＸＸＸＸ<br>
+                                            ASN Vendor No ： ＸＸＸＸＸ<br>
+                                            ASN Item No ： ＸＸＸＸＸ<br>
+                                            PO No ： ＸＸＸＸＸ<br>
+                                            PO Item No ： ＸＸＸＸＸＸＸ<br> </span>
+                            </td>
+                            
+                        </tr>
+                        <tr class="tchild3 " style="display: none;">
+                                <td colspan="1"></td>
+                                <td colspan="9">供單料件細項合併明細</td>
+                            </tr>
+                            <tr class="tchild3 " style="display: none;"> 
+                                <th colspan="1"></th>
+                                <th colspan="3">計畫數量</th>
+                                <th colspan="3">實際數量</th>
+                                <th colspan="4">供單料件</th>
+                            </tr>
+                            <tr class="tchild3 " style="display: none;">
+                                <td colspan="1"></td>
+                                <td colspan="3">3</td>
+                                <td colspan="3"><input type="text" class="inp-style2 focus wid_50px" value="1"></td>
+                                <td colspan="4">woitem124</td>
+                            </tr>
+                        <tr>
+                        <tr>
+                            <td class="txt_ct">4</td>
+                            <td class="txt_org expand"><i class="fa fa-angle-down" style="font-size: 30px;"></i></td>
+                            <td>item1<br>XXXXX...</td>
+                            <td>
+                                <input type="text" class="inp-style2 focus wid_50px" value="1">
+                            </td>
+                            <td>
+                                <select class="inp-style3">
+                                    <option value="1">SAP_01</option>
+                                    <option value="2">SAP_02</option>
+                                    <option value="3">SAP_03</option>
+                                </select>
+                                <button class="search-scan1"></button>
+                            </td>
+                            <td>
+                                XXXXXXX <br> 公司帳櫃位...
+                            </td>
+                            <td>NEW<br>XXXXXX</td>
+                            <td>V 6637 <br> XX廠商</td>
+                            <td>xxxxx</td>
+                            <td class="txt_org more" width="5%"><span style="display:inline-block;">more...</span>
+                                <span class="more-info2" >成本中心代碼 ： ＸＸＸＸＸＸ<br>
+                                        安全庫存量 ： ＸＸＸＸＸ<br>
+                                        計畫數量 ： ＸＸＸＸＸＸ<br>
+                                        計畫櫃位 ： ＸＸＸＸＸ<br>
+                                        計畫櫃位說明 ： ＸＸＸＸＸＸ<br>
+                                        計畫櫃位課別 ： ＸＸＸＸＸＸ<br>
+                                        ASN Vendor No ： ＸＸＸＸＸ<br>
+                                        ASN Item No ： ＸＸＸＸＸ<br>
+                                        PO No ： ＸＸＸＸＸ<br>
+                                        PO Item No ： ＸＸＸＸＸＸＸ<br> </span>
+                        </td>
+                        </tr>
+                        <tr class="tchild4 " style="display: none;">
+                                <td colspan="1"></td>
+                                <td colspan="9">供單料件細項合併明細</td>
+                            </tr>
+                            <tr class="tchild4 " style="display: none;"> 
+                                <th colspan="1"></th>
+                                <th colspan="3">計畫數量</th>
+                                <th colspan="3">實際數量</th>
+                                <th colspan="4">供單料件</th>
+                            </tr>
+                            <tr class="tchild4 " style="display: none;">
+                                <td colspan="1"></td>
+                                <td colspan="3">3</td>
+                                <td colspan="3"><input type="text" class="inp-style2 focus wid_50px" value="1"></td>
+                                <td colspan="4">woitem124</td>
+                            </tr>
+                        <tr>
+                        <tr>
+                            <td class="txt_ct">5</td>
+                            <td class="txt_org expand"><i class="fa fa-angle-down" style="font-size: 30px;"></i></td>
+                            <td>item1<br>XXXXX...</td>
+                            <td>
+                                <input type="text" class="inp-style2 focus wid_50px" value="1">
+                            </td>
+                            <td>
+                                <select class="inp-style3">
+                                    <option value="1">SAP_01</option>
+                                    <option value="2">SAP_02</option>
+                                    <option value="3">SAP_03</option>
+                                </select>
+                                <button class="search-scan1"></button>
+                            </td>
+                            <td>
+                                XXXXXXX <br> 公司帳櫃位...
+                            </td>
+                            <td>NEW<br>XXXXXX</td>
+                            <td>V 6637 <br> XX廠商</td>
+                            <td>xxxxx</td>
+                            <td class="txt_org more" width="5%"><span style="display:inline-block;">more...</span>
+                                <span class="more-info2" >成本中心代碼 ： ＸＸＸＸＸＸ<br>
+                                        安全庫存量 ： ＸＸＸＸＸ<br>
+                                        計畫數量 ： ＸＸＸＸＸＸ<br>
+                                        計畫櫃位 ： ＸＸＸＸＸ<br>
+                                        計畫櫃位說明 ： ＸＸＸＸＸＸ<br>
+                                        計畫櫃位課別 ： ＸＸＸＸＸＸ<br>
+                                        ASN Vendor No ： ＸＸＸＸＸ<br>
+                                        ASN Item No ： ＸＸＸＸＸ<br>
+                                        PO No ： ＸＸＸＸＸ<br>
+                                        PO Item No ： ＸＸＸＸＸＸＸ<br> </span>
+                        </td>
+                        </tr>
+                        <tr class="tchild5 " style="display: none;">
+                                <td colspan="1"></td>
+                                <td colspan="9">供單料件細項合併明細</td>
+                            </tr>
+                            <tr class="tchild5 " style="display: none;"> 
+                                <th colspan="1"></th>
+                                <th colspan="3">計畫數量</th>
+                                <th colspan="3">實際數量</th>
+                                <th colspan="4">供單料件</th>
+                            </tr>
+                            <tr class="tchild5 " style="display: none;">
+                                <td colspan="1"></td>
+                                <td colspan="3">3</td>
+                                <td colspan="3"><input type="text" class="inp-style2 focus wid_50px" value="1"></td>
+                                <td colspan="4">woitem124</td>
+                            </tr>
+                        <tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- <div id="btn-box posit_b">
+                <a href="#tab2" data-toggle="tab" class="btn_org1">下一步：工具回報</a>
+            </div> -->
+        </div>
+        <!-- <div class="tab-pane" id="tab2">
+                <div class="tb_sin2">
+                    <div class="detail-contact-head">
+                        <div class="mar_b15px clearfix">
+                            <span class="detail-page-title1 col-sm-6">項目 (共12筆)</span>
+                            <span class="col-sm-6">
+                                <button class="submit_btn2 float-r tool" data-toggle="modal" data-target="#modal_choose_tool">
+                                    <i class="ui-add"></i>選取計劃工具</button>
+                            </span>
+                        </div>
+                    </div>
+                    <table class="wid_100per">
+                        <thead>
+                            <tr>
+                                <th>工具種類</th>
+                                <th>工具類別</th>
+                                <th></th>
+                                <th>工具資訊</th>
+                                <th>儀器名稱</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>廠商校驗</td>
+                                <td>電表-三用電錶</td>
+                                <td>
+                                    <button class="btn_gray">重選</button>
+                                </td>
+                                <td>25813028</td>
+                                <td>F15P1/2三用電錶</td>
+                                <td class="txt_ct">
+                                    <button class="btn_org">
+                                        <i class="ui-close"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>廠商校驗</td>
+                                <td>電表-三用電錶</td>
+                                <td>
+                                    <button class="btn_gray">重選</button>
+                                </td>
+                                <td>25813028</td>
+                                <td>F15P1/2三用電錶</td>
+                                <td class="txt_ct">
+                                    <button class="btn_org">
+                                        <i class="ui-close"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>廠商校驗</td>
+                                <td>電表-三用電錶</td>
+                                <td>
+                                    <button class="btn_gray">重選</button>
+                                </td>
+                                <td>25813028</td>
+                                <td>F15P1/2三用電錶</td>
+                                <td class="txt_ct">
+                                    <button class="btn_org">
+                                        <i class="ui-close"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+                <div id="btn-box posit_b">
+                    <a href="#" data-toggle="modal" data-target="#modal_submit" class="btn_org1">下一步：呈核</a>
+                </div>
+            </div>
+            <div class="tab-pane" id="tab3">
+                <div class="mask-layout mask-small">
+                    <div class="mask-block">
+                        <div class="mask-icon"></div>
+                        <p class="mask-txt">載入中</p>
+                    </div>
+                </div>
+                <div class="nav-list txt_ct mar_b15px">
+                    <ul class="nav-tabs2" role="tablist">
+                        <li role="presentation" class="active wid_33per">
+                            <a href="#tab3-1" data-toggle="tab">工單<br>(待回報:3筆)</a>
+                        </li>
+                        <li role="presentation" class="wid_33per">
+                            <a href="#tab3-2" data-toggle="tab">保養作業程序</a>
+                        </li>
+                        <li role="presentation" class="wid_33per">
+                            <a href="#tab3-3" data-toggle="tab">材料</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="tab-content">
+                    <div class="tab-pane active" id="tab3-1">
+                        <div class="tb_sin2">
+                            <div class="detail-contact-head">
+                                <div class="mar_b15px clearfix">
+                                    <span class="detail-page-title1 col-sm-6">項目 (共12筆),待回報:3筆</span>
+                                </div>
+                            </div>
+                            <table class="tb_sin wid_100per">
+                                <thead>
+                                    <tr>
+                                        <th>工單編號/資產</th>
+                                        <th>說明</th>
+                                        <th>狀態</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    <tr class="tr1 view">
+                                        <td>
+                                            <span class="txt_big">WO20170000013420</span>
+                                        </td>
+                                        <td class="txt_gray1 wid_60per td_note">我是備註說明文字兩行超過後我是備註說明文字兩行超過後我是備註說明文字兩行超過後我是備註說明文字兩行超過後我是備註說明文字兩行超過後我是備註說明文字兩行超過後</td>
+                                        <td class="txt_org">
+                                            <i class="ui-dot"></i>
+                                            <strong class="txt_big">待回報</strong>
+                                        </td>
+                                    </tr>
+                                    <tr class="tr2 view">
+                                        <td>
+                                            <span class="spacing"></span>
+                                            <span class="txt_gray txt_big">F15-ASSET100</td>
+                                        <td class="txt_gray1 wid_60per td_note">我是備註說明文字兩行超過後我是備註說明文字兩行超過後我是備註說明文字兩行超過後</td>
+                                        <td class="txt_org">
+                                            <i class="ui-dot"></i>
+                                            <strong class="txt_big">待回報</strong>
+                                        </td>
+                                    </tr>
+                                    <tr class="tr2 view">
+                                        <td>
+                                            <span class="spacing"></span>
+                                            <span class="txt_gray txt_big">F15-ASSET100</td>
+                                        <td class="txt_gray1 wid_60per td_note">我是備註說明文字兩行超過後我是備註說明文字兩行超過後我是備註說明文字兩行超過後</td>
+                                        <td class="txt_org">
+                                            <i class="ui-dot"></i>
+                                            <strong class="txt_big">待回報</strong>
+                                        </td>
+                                    </tr>
+                                    <tr class="tr2 view">
+                                        <td>
+                                            <span class="spacing"></span>
+                                            <span class="txt_gray txt_big">F15-ASSET100</td>
+                                        <td class="txt_gray1 wid_60per td_note">我是備註說明文字兩行超過後我是備註說明文字兩行超過後我是備註說明文字兩行超過後</td>
+                                        <td class="txt_gray3">
+                                            <i class="ui-dot"></i>
+                                            <strong class="txt_big">已回報</strong>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="tab3-2">
+                        <div class="tb_sin2">
+                            <div class="detail-contact-head">
+                                <div class="mar_b15px clearfix">
+                                    <span class="detail-page-title1 col-sm-6">項目 (共12筆)</span>
+                                </div>
+                            </div>
+                            <table class="wid_100per">
+                                <thead>
+                                    <tr>
+                                        <th>資產</th>
+                                        <th>序號</th>
+                                        <th>作業程序與檢查重點</th>
+                                        <th>作業規格</th>
+                                        <th>結果</th>
+                                        <th>測量值</th>
+                                        <th>備註</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="view">
+                                        <td>APPAFB01-0302</td>
+                                        <td>10</td>
+                                        <td class="td_note max_wid_200px">工具與材料準備：活動板手，螺絲起子活動板手工具與材料準備：活動板手，螺絲起子活動板手</td>
+                                        <td>完成準備:V</td>
+                                        <td class="txt_ct">
+                                            <span class="status_ok"></span>
+                                        </td>
+                                        <td>12.1</td>
+                                        <td class="txt_ct"></td>
+                                    </tr>
+                                    <tr class="view">
+                                        <td>APPAFB01-0302</td>
+                                        <td>10</td>
+                                        <td class="td_note max_wid_200px">工具與材料準備：活動板手，螺絲起子活動板手工具與材料準備：活動板手，螺絲起子活動板手</td>
+                                        <td>完成準備:V</td>
+                                        <td class="txt_ct">
+                                            <span class="status_ok"></span>
+                                        </td>
+                                        <td>12.1</td>
+                                        <td class="txt_ct">壓力異常超標</td>
+                                    </tr>
+                                    <tr class="view">
+                                        <td>APPAFB01-0302</td>
+                                        <td>10</td>
+                                        <td class="td_note max_wid_200px">工具與材料準備：活動板手，螺絲起子活動板手工具與材料準備：活動板手，螺絲起子活動板手</td>
+                                        <td>完成準備:V</td>
+                                        <td class="txt_ct">
+                                            <span class="status_no"></span>
+                                        </td>
+                                        <td>12.1</td>
+                                        <td class="txt_ct"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="tab3-3">
+                        <div class="tb_sin2">
+                            <div class="detail-contact-head">
+                                <div class="mar_b15px clearfix">
+                                    <span class="detail-page-title1 col-sm-6">項目 (共12筆)</span>
+                                </div>
+                            </div>
+                            <table class="wid_100per">
+                                <thead>
+                                    <tr>
+                                        <th>資產</th>
+                                        <th>料號</th>
+                                        <th>料號說明</th>
+                                        <th>領料數量</th>
+                                        <th>實際使用數量</th>
+                                        <th>備註</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="view">
+                                        <td>QCBDA8-LSC</td>
+                                        <td>APPAFB01-0302</td>
+                                        <td>廠商-XXX</td>
+                                        <td>xxx</td>
+                                        <td>xxx</td>
+                                        <td class="td_note max_wid_100px">備註說明備註說明備註說明</td>
+                                    </tr>
+                                    <tr class="view">
+                                        <td>QCBDA8-LSC</td>
+                                        <td>APPAFB01-0302</td>
+                                        <td>廠商-XXX</td>
+                                        <td>xxx</td>
+                                        <td>xxx</td>
+                                        <td class="td_note max_wid_100px"></td>
+                                    </tr>
+                                    <tr class="view">
+                                        <td>QCBDA8-LSC</td>
+                                        <td>APPAFB01-0302</td>
+                                        <td>廠商-XXX</td>
+                                        <td>xxx</td>
+                                        <td>xxx</td>
+                                        <td class="td_note max_wid_100px">備註說明備註說明備註說明</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="tab-pane" id="tab4">
+                <div class="nav-list txt_ct mar_b15px">
+                    <ul class="nav-tabs2" role="tablist">
+                        <li role="presentation" class="active wid_50per">
+                            <a href="#tab4-1" data-toggle="tab">未回報設備清單(5)</a>
+                        </li>
+                        <li role="presentation" class="wid_50per">
+                            <a href="#tab4-2" data-toggle="tab">用料不符清單(5)</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="tab-content">
+                    <div class="tab-pane active" id="tab4-1">
+                        <div class="tb_sin2">
+                            <div class="detail-contact-head">
+                                <div class="mar_b15px clearfix">
+                                    <span class="detail-page-title1 col-sm-6">項目 (共12筆)</span>
+                                </div>
+                            </div>
+                            <table class="wid_100per">
+                                <thead>
+                                    <tr>
+                                        <th>工單</th>
+                                        <th>資產</th>
+                                        <th>說明</th>
+                                        <th>狀態</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="view">
+                                        <td>WO2016000000003</td>
+                                        <td>APPAFB01-0302</td>
+                                        <td class="td_note max_wid_200px">說明文字說明文字說明文字說明文字說明文字說明文字說明文字</td>
+                                        <td class="txt_org">
+                                            <i class="ui-dot"></i>
+                                            <strong class="txt_big">待回報</strong>
+                                        </td>
+                                    </tr>
+                                    <tr class="view">
+                                        <td>WO2016000000003</td>
+                                        <td>APPAFB01-0302</td>
+                                        <td class="td_note max_wid_200px">說明文字說明文字說明文字說明文字說明文字說明文字說明文字</td>
+                                        <td class="txt_org">
+                                            <i class="ui-dot"></i>
+                                            <strong class="txt_big">待回報</strong>
+                                        </td>
+                                    </tr>
+                                    <tr class="view">
+                                        <td>WO2016000000003</td>
+                                        <td>APPAFB01-0302</td>
+                                        <td class="td_note max_wid_200px">說明文字說明文字說明文字說明文字說明文字說明文字說明文字</td>
+                                        <td class="txt_gray3">
+                                            <i class="ui-dot"></i>
+                                            <strong class="txt_big">已回報</strong>
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="tab4-2">
+                        <div class="tb_sin2">
+                            <div class="detail-contact-head">
+                                <div class="mar_b15px clearfix">
+                                    <span class="detail-page-title1 col-sm-6">項目 (共12筆)</span>
+                                </div>
+                            </div>
+                            <table class="wid_100per">
+                                <thead>
+                                    <tr>
+                                        <th>資產</th>
+                                        <th>料號</th>
+                                        <th>說明</th>
+                                        <th>原定量</th>
+                                        <th>計畫需求量</th>
+                                        <th>實際使用量</th>
+                                        <th>領料量</th>
+                                        <th>退料量</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="view">
+                                        <td>WO2016000000003</td>
+                                        <td>APPAFB01-0302</td>
+                                        <td class="td_note max_wid_100px">說明文字說明文字說明文字說明文字說明文字說明文字說明文字</td>
+                                        <td>xxx</td>
+                                        <td>xxx</td>
+                                        <td>xxx</td>
+                                        <td>xxx</td>
+                                        <td>xxx</td>
+                                    </tr>
+                                    <tr class="view">
+                                        <td>WO2016000000003</td>
+                                        <td>APPAFB01-0302</td>
+                                        <td class="td_note max_wid_100px">說明文字說明文字說明文字說明文字說明文字說明文字說明文字</td>
+                                        <td>xxx</td>
+                                        <td>xxx</td>
+                                        <td>xxx</td>
+                                        <td>xxx</td>
+                                        <td>xxx</td>
+                                    </tr>
+                                    <tr class="view">
+                                        <td>WO2016000000003</td>
+                                        <td>APPAFB01-0302</td>
+                                        <td class="td_note max_wid_100px">說明文字說明文字說明文字說明文字說明文字說明文字說明文字</td>
+                                        <td>xxx</td>
+                                        <td>xxx</td>
+                                        <td>xxx</td>
+                                        <td>xxx</td>
+                                        <td>xxx</td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane" id="tab5">
+                <div class="tb_sin2">
+                    <div class="detail-contact-head">
+                        <div class="mar_b15px clearfix">
+                            <span class="detail-page-title1 col-sm-6">項目 (共12筆)</span>
+                        </div>
+                    </div>
+                    <table class="wid_100per">
+                        <thead>
+                            <tr>
+                                <th>狀態</th>
+                                <th>單位</th>
+                                <th>課別名稱</th>
+                                <th>姓名</th>
+                                <th>開始日期</th>
+                                <th>核簽日期</th>
+                                <th>意見</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="view">
+                                <td class="txt_ct">
+                                    <span class="status_green_ok"></span>
+                                </td>
+                                <td>00203V03</td>
+                                <td>機械一課</td>
+                                <td>廠商-XXX</td>
+                                <td>2018/05/22 02:44</td>
+                                <td>2018/05/22 10:09</td>
+                                <td class="td_note max_wid_100px">說明文字說明文字說明文字說明文字說明文字說明文字說明文字</td>
+                            </tr>
+                            <tr class="view">
+                                <td class="txt_ct">
+                                    <span class="status_green_ok"></span>
+                                </td>
+                                <td>00203V03</td>
+                                <td>機械一課</td>
+                                <td>廠商-XXX</td>
+                                <td>2018/05/22 02:44</td>
+                                <td>2018/05/22 10:09</td>
+                                <td class="td_note max_wid_100px">說明文字說明文字說明文字說明文字說明文字說明文字說明文字</td>
+                            </tr>
+                            <tr class="view">
+                                <td class="txt_ct">
+                                    <span class="status_green_ok"></span>
+                                </td>
+                                <td>00203V03</td>
+                                <td>機械一課</td>
+                                <td>廠商-XXX</td>
+                                <td>2018/05/22 02:44</td>
+                                <td>2018/05/22 10:09</td>
+                                <td class="td_note max_wid_100px">說明文字說明文字說明文字說明文字說明文字說明文字說明文字</td>
+                            </tr>
+                            <tr class="view">
+                                <td class="txt_ct">
+                                    <span class="status_gray_pending"></span>
+                                </td>
+                                <td>00203V03</td>
+                                <td>機械一課</td>
+                                <td>廠商-XXX</td>
+                                <td>2018/05/22 02:44</td>
+                                <td>2018/05/22 10:09</td>
+                                <td class="td_note max_wid_100px">說明文字說明文字說明文字說明文字說明文字說明文字說明文字</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+            </div> -->
+
+    </div>
+    </div>
+
+
+
+    <!-- Modal -->
+
+
+    <!-- 錯誤訊息跳窗 -->
+    <div class="modal fade" id="modal_error" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="ui-close dark" data-dismiss="modal" aria-label="Close"></button>
+                    <h4 class="modal-title" id="myModalLabel">錯誤訊息</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-slogan">未填寫人力回報，請重新確認</div>
+                    <div class="btn-grp modal-row">
+                        <button type="button" data-dismiss="modal" data-target="#modal_submit" data-toggle="modal"
+                            class="submit_btn mar_b15px">確定</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 呈核跳窗 -->
+    <div class="modal fade" id="modal_submit" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="ui-close modal-close" data-dismiss="modal" aria-label="Close"></button>
+                    <h4 class="modal-title" id="myModalLabel">呈核</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-slogan">完成工作流程設定</div>
+                    <div class="modal-txt">
+                        <p>作業：請您執行-說明:F-CCH-01-03-013 P529 F6B-Slurry System…</p>
+                    </div>
+                    <div class="modal-row clearfix">
+                        <textarea name="" id="" cols="30" rows="10" class="col-sm-12" placeholder="輸入簽核意見"></textarea>
+                    </div>
+                    <div class="btn-grp modal-row">
+                        <button type="button" data-dismiss="modal" data-target="#modal_success" data-toggle="modal"
+                            class="submit_btn mar_b15px">呈核</button>
+                        <button type="button" class="submit_btn cancel">取消</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 完成呈核跳窗 -->
+    <div class="modal fade" id="modal_success" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="ui-close dark" data-dismiss="modal" aria-label="Close"></button>
+                    <h4 class="modal-title" id="myModalLabel">成功</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-slogan">已結案!</div>
+                    <div class="btn-grp modal-row">
+                        <a href="search_list.html" class="submit_btn mar_b15px" style="text-align: center; color: #fff;">確定</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 選取計劃用料跳窗 -->
+    <div class="modal fade" id="modal_choose_material" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="ui-close dark" data-dismiss="modal" aria-label="Close"></button>
+                    <h4 class="modal-title" id="myModalLabel">選取計畫用料</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="head-searchbox">
+                        <div class="search-content row">
+                            <div class="search_cal col-sm-11">
+                                <i class="ui-search-trigger col-sm-1"></i>
+                                <input type="text" class="ui-search col-sm-10 pla_ct" placeholder="請輸入或掃描設備編號條碼進行查詢" />
+                                <span class="clear col-sm-1">X</span>
+                            </div>
+                            <div>
+                                <button class="search-scan col-sm-1"></button>
+                                <input type="file" id="scan1" accept="image/*" capture="environment" style="display: none;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tb_sin2">
+                        <table class="wid_100per">
+                            <thead>
+                                <tr>
+                                    <th class="txt_ct">
+                                        <label class="checkbox">
+                                            <input type="checkbox" name="checkboxAll" id="checkboxAll">
+                                            <div class="checkbox-box"></div>
+                                        </label>
+                                    </th>
+                                    <th>料號</th>
+                                    <th>料號說明</th>
+                                    <th>領料數量</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="txt_ct">
+                                        <label class="checkbox">
+                                            <input type="checkbox" name="checkboxSingle">
+                                            <div class="checkbox-box"></div>
+                                        </label>
+                                    </td>
+                                    <td>APPAFB01-0302</td>
+                                    <td class="td_note max_wid_100px">說明文字說明文字說明文字說明文字說明文字說明文字說明文字</td>
+                                    <td>10000</td>
+                                </tr>
+                                <tr>
+                                    <td class="txt_ct">
+                                        <label class="checkbox">
+                                            <input type="checkbox" name="checkboxSingle">
+                                            <div class="checkbox-box"></div>
+                                        </label>
+                                    </td>
+                                    <td>APPAFB01-0302</td>
+                                    <td class="td_note max_wid_100px">說明文字說明文字說明文字說明文字說明文字說明文字說明文字</td>
+                                    <td>10000</td>
+                                </tr>
+                                <tr>
+                                    <td class="txt_ct">
+                                        <label class="checkbox">
+                                            <input type="checkbox" name="checkboxSingle">
+                                            <div class="checkbox-box"></div>
+                                        </label>
+                                    </td>
+                                    <td>APPAFB01-0302</td>
+                                    <td class="td_note max_wid_100px">說明文字說明文字說明文字說明文字說明文字說明文字說明文字</td>
+                                    <td>10000</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                    </div>
+                    <div class="btn-grp modal-row">
+                        <button type="button" data-dismiss="modal" class="submit_btn mar_b15px">確定</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 選取計畫人力跳窗 -->
+    <div class="modal fade" id="modal_choose_ppl" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="ui-close dark" data-dismiss="modal" aria-label="Close"></button>
+                    <h4 class="modal-title" id="myModalLabel">選取計畫人力</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="head-searchbox">
+                        <div class="search-content row">
+                            <div class="search_cal col-sm-11">
+                                <i class="ui-search-trigger col-sm-1"></i>
+                                <input type="text" class="ui-search col-sm-10 pla_ct" placeholder="請輸入或掃描設備編號條碼進行查詢" />
+                                <span class="clear col-sm-1">X</span>
+                            </div>
+                            <button class="search-scan col-sm-1"></button>
+                        </div>
+                    </div>
+                    <div class="tb_sin2">
+                        <table class="wid_100per">
+                            <thead>
+                                <tr>
+                                    <th class="txt_ct">
+                                        <label class="checkbox">
+                                            <input type="checkbox" name="checkboxAllSelect">
+                                            <div class="checkbox-box"></div>
+                                        </label>
+                                    </th>
+                                    <th>人力</th>
+                                    <th>姓名</th>
+                                    <th>工時</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="txt_ct">
+                                        <label class="checkbox">
+                                            <input type="checkbox" name="checkboxSingle">
+                                            <div class="checkbox-box"></div>
+                                        </label>
+                                    </td>
+                                    <td>B9439680</td>
+                                    <td>廠商-XXX</td>
+                                    <td>8.0</td>
+                                </tr>
+                                <tr>
+                                    <td class="txt_ct">
+                                        <label class="checkbox">
+                                            <input type="checkbox" name="checkboxSingle">
+                                            <div class="checkbox-box"></div>
+                                        </label>
+                                    </td>
+                                    <td>APPAFB01-0302</td>
+                                    <td>廠商-XXX</td>
+                                    <td>8.0</td>
+                                </tr>
+                                <tr>
+                                    <td class="txt_ct">
+                                        <label class="checkbox">
+                                            <input type="checkbox" name="checkboxSingle">
+                                            <div class="checkbox-box"></div>
+                                        </label>
+                                    </td>
+                                    <td>APPAFB01-0302</td>
+                                    <td>廠商-XXX</td>
+                                    <td>8.0</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                    </div>
+                    <div class="btn-grp modal-row">
+                        <button type="button" data-dismiss="modal" class="submit_btn mar_b15px">確定</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 選取計劃工具跳窗 -->
+    <div class="modal fade" id="modal_choose_tool" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="ui-close dark" data-dismiss="modal" aria-label="Close"></button>
+                    <h4 class="modal-title" id="myModalLabel">選取計畫工具</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="head-searchbox">
+                        <div class="search-content row">
+                            <div class="search_cal col-sm-11">
+                                <i class="ui-search-trigger col-sm-1"></i>
+                                <input type="text" class="ui-search col-sm-10 pla_ct" placeholder="請輸入或掃描設備編號條碼進行查詢" />
+                                <span class="clear col-sm-1">X</span>
+                            </div>
+                            <button class="search-scan col-sm-1"></button>
+                        </div>
+                        <div class="tb_sin2">
+                            <table class="wid_100per">
+                                <thead>
+                                    <tr>
+                                        <th class="txt_ct">
+                                            <label class="checkbox">
+                                                <input type="checkbox" name="checkboxAllSelect">
+                                                <div class="checkbox-box"></div>
+                                            </label>
+                                        </th>
+                                        <th>工具種類</th>
+                                        <th>工具類別</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="txt_ct">
+                                            <label class="checkbox">
+                                                <input type="checkbox" name="checkboxSingle">
+                                                <div class="checkbox-box"></div>
+                                            </label>
+                                        </td>
+                                        <td>廠商校驗-0302</td>
+                                        <td>電表-三用電錶</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                        </div>
+
+                    </div>
+                    <div class="btn-grp modal-row">
+                        <button type="button" data-dismiss="modal" class="submit_btn mar_b15px">確定</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 挑選工具跳窗 -->
+    <div class="modal fade" id="modal_pick_tool" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="ui-close dark" data-dismiss="modal" aria-label="Close"></button>
+                    <h4 class="modal-title" id="myModalLabel">挑選工具</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="tb_sin2">
+                        <table class="wid_100per">
+                            <thead>
+                                <tr>
+                                    <th class="txt_ct">
+                                    </th>
+                                    <th>序號</th>
+                                    <th>工儀器名稱</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="txt_ct">
+                                        <label class="radio-circle">
+                                            <input type="radio" name="radio-circle">
+                                            <div class="circle-box"></div>
+                                        </label>
+                                    </td>
+                                    <td>25813028</td>
+                                    <td>F15P1/2 三用電錶</td>
+                                </tr>
+                                <tr>
+                                    <td class="txt_ct">
+                                        <label class="radio-circle">
+                                            <input type="radio" name="radio-circle">
+                                            <div class="circle-box"></div>
+                                        </label>
+                                    </td>
+                                    <td>25813028</td>
+                                    <td>F15P1/2 三用電錶</td>
+                                </tr>
+                                <tr>
+                                    <td class="txt_ct">
+                                        <label class="radio-circle">
+                                            <input type="radio" name="radio-circle">
+                                            <div class="circle-box"></div>
+                                        </label>
+                                    </td>
+                                    <td>25813028</td>
+                                    <td>F15P1/2 三用電錶</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                    </div>
+                    <div class="btn-grp modal-row">
+                        <button type="button" data-dismiss="modal" class="submit_btn mar_b15px">確定</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal -->
+</body>
+
+</html>
