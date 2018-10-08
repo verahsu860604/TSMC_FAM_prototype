@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TSMC 查詢清單</title>
+    <script src="../../inc/js/jquery-3.3.1.min.js"></script>
+    <script src="../../inc/js/bootstrap.min.js"></script>
+    <script src="../dist/bundle.js"></script>
+    <!-- <script src="../../inc/js/index.js"></script> -->
+    <script src="../../inc/js/action.js"></script>
+    <script src="../../inc/js/base.js"></script>
+    <link rel="stylesheet" href="../../inc/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../inc/css/base.css">
+    <link rel="stylesheet" href="../../inc/css/layout.css">
+    <link rel="stylesheet" href="../../inc/css/form.css">
+    <link rel="stylesheet" href="../../inc/css/comm.css">
+</head>
+
+<body>
+    <div class="mask-layout">
+        <div class="mask-block">
+            <div class="mask-icon"></div>
+            <p class="mask-txt">載入中</p>
+        </div>
+    </div>
+    <div id="header">
+        <div class="left-menu">
+            <button class="left-menu-btn">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <span class="titleName">定期盤點計劃</span>
+
+            <!--選單內容開始-->
+            <div class="menu-layout"></div>
+            <div class="left-menu-content">
+                <div class="nav-header">
+                    <button class="ui-close" id="close_left_menu"></button>
+                    <div class="welcome-title">
+                        <i></i>
+                        <div class="welcome-title-content">
+                            <span class="welcome-title-h1">蔡O明</span>
+                            <br />
+                            <span class="welcome-txt">MAMOMADA</span>
+                        </div>
+                    </div>
+                </div>
+                <ul class="nav-tabs1">
+
+                    <li id="menuActive">
+                        <a href="#">庫房庫存異動</a>
+                    </li>
+                    <li>
+                        <a href="#">倉庫盤點計劃</a>
+                    </li>
+                    <li>
+                        <a href="#">料件庫存查詢</a>
+                    </li>
+                    <li>
+                        <a href="../PMreport/search_list.html">PM工單回報管理</a>
+                    </li>
+                </ul>
+                <ul class="nav-tabs5">
+                    <li>
+                        <a href="../login.html">登出系統</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!--選單內容結束-->
+
+        </div>
+        <div class="sticky">
+            <!-- <div class="header-logo sm">
+                <a href="#" class="logo_only"></a>
+            </div> -->
+            <div class="head-searchbox">
+                <div class="search-content">
+                    <div class="search_cal col-sm-11">
+                        <i class="ui-search-trigger col-sm-1"></i>
+                        <div>
+                            <div class="more_search" style="display: none">
+                                <span class="txt"></span>
+                                <span class="cross">X</span>
+                            </div>
+                            <input type="text" class="ui-search col-sm-10 pla_ct" placeholder="請輸入或掃描設備編號條碼進行查詢" />
+                        </div>
+                        <span class="clear col-sm-1">X</span>
+                    </div>
+                    <div>
+                        <button class="search-scan col-sm-1"></button>
+                        <input type="file" id="scan1" accept="image/*" capture="environment" style="display: none;">
+                    </div>
+                </div>
+                <a href="#" data-toggle="modal" data-target="#moresearch" class="link_red1">進階查詢</a>
+
+
+            </div>
+        </div>
+        <div id="menu">
+            <nav class="nav_mega_menu">
+                <ul>
+                    <li class=" btn_org12 active">
+                        <a href="#" class="inventoryList">定期盤點計劃清單</a>
+                    </li>
+                    <li class="btn_org12 today_finish" style="position: relative;">
+                        <hr style="position: absolute;border:none;border-left:3px solid hsla(200, 10%, 50%,100);
+                            height:33px;
+                            width:10px;left:-8px;top: -20px;">
+                        <a class="inventoryDone" href="#">本日完成</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <div id="contact">
+        <div class="wrapper-size1">
+            <div class="nav-list txt_ct mar_b15px">
+                <!-- <ul class="nav-tabs2 wid_50per" role="tablist">
+                    <li role="presentation" class="active wid_50per">
+                        <a href="#tab1" data-toggle="tab">待完成 (16)</a>
+                    </li>
+                    <li role="presentation" class="wid_50per">
+                        <a href="#tab2" data-toggle="tab">簽核中 (16)</a>
+                    </li>
+                </ul> -->
+                <div class="extend-table1">
+                    <!-- <span class="txt_gray">展開工單</span> -->
+                    <!-- <input type="checkbox" name="展開" id="switch" class="s1">
+                        <label for="switch" id="switchDot">
+                                <span class="onoffswitch-inner1"></span>
+                                <span class="onoffswitch-switch1"></span>
+                        </label> -->
+                    <!-- <div class="onoffswitch">
+                                <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox s1" id="myonoffswitch" checked>
+                                <label class="onoffswitch-label" for="myonoffswitch">
+                                    <span class="onoffswitch-inner"></span>
+                                    <span class="onoffswitch-switch"></span>
+                                </label>
+                            </div> -->
+                </div>
+
+                <div class="extend-table1">
+                    <span>共1筆</span>
+                </div>
+                <div class="extend-table">
+                    <div class="onoffs2">
+                        <button onclick="" class="submit_btn4" id="storageBtn" style="display: none;">公司帳入庫開單</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane active" id="inventoryTab">
+                    <table class="tb_sin wid_100per">
+                        <thead>
+                            <tr>
+                                <th style="width: 60px;" class="table_ha">盤點計劃編號</th>
+                                <!-- <th style="width: 30px;"></th> -->
+                                <th class="table_ha">盤點計畫名稱</th>
+                                <th class="table_ha">廠區</th>
+                                <th class="table_ha">倉庫 <br>
+                                    <!-- <button onclick="#" class="submit_btn3">庫存快照時間</button></th> -->
+                                <th class="table_ha">庫存快照時間</th>
+                                <th class="table_ha">盤點確認時間</th>
+                                <th class="table_ha">課別代號</th>
+                                <th class="wid_120px table_ha">建立者</th>
+                                <th class="table_ha">狀態說明</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="tr1">
+                                <td class="main" onclick="location.href='../../html/inventory/search_detail.html'">
+                                    <!-- <small class="txt_gray4">母工單(3) </small> -->
+                                    <!-- <br/> -->
+                                    <span class="txt_big title_num">F1420180900 </span>
+                                </td>
+                                <td onclick="location.href='../../html/inventory/search_detail.html'">
+                                    <!-- <span> <img src="../../inc/svg/minus.svg" alt="open" class="close_child" style="width: 18px;height: 18px; margin-top: 15px;"></span> -->
+                                    <span>南科廠務庫房9月盤點計劃...</span>
+                                </td>
+                                <td>F14</td>
+                                <td onclick="location.href='../../html/inventory/search_detail.html'">FWM-T<br>中科廠務庫...</td>
+                                <td onclick="location.href='../../html/inventory/search_detail.html'">
+                                    <span>2018/8/31<br>9:12:00AM</span>
+                                </td>
+                                <td onclick="location.href='../../html/inventory/search_detail.html'">2018/8/31<br>4:24:00PM</td>
+                                <td onclick="location.href='../../html/inventory/search_detail.html'">00203109</td>
+                                <td onclick="location.href='../../html/inventory/search_detail.html'">廠商<br>謝X雅</td>
+                                <td onclick="location.href='../../html/inventory/search_detail.html'">盤點中</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="doneTab">
+
+                    <table class="tb_sin wid_100per">
+                        <thead>
+                            <tr>
+                                <th style="width: 60px;" class="table_ha">盤點計劃編號</th>
+                                <!-- <th style="width: 30px;"></th> -->
+                                <th class="table_ha">盤點計畫名稱</th>
+                                <th class="table_ha">廠區</th>
+                                <th class="table_ha">倉庫 <br>
+                                <th class="table_ha">庫存快照時間</th>
+                                <th class="table_ha">盤點確認時間</th>
+                                <th class="table_ha">課別代號</th>
+                                <th class="wid_120px table_ha">建立者</th>
+                                <th class="table_ha">狀態說明</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="tr1">
+                                <td class="main" onclick="location.href='../../html/inventory/search_detail.html'">
+                                    <span class="txt_big title_num">F1420180900</span>
+                                </td>
+                                <td onclick="location.href='../../html/inventory/search_detail.html'">
+                                    <span>南科廠務庫房9月盤點計劃...</span>
+                                </td>
+                                <td>F14</td>
+                                <td onclick="location.href='../../html/inventory/search_detail.html'">FWM-T <br> 中科廠務庫...</td>
+                                <td onclick="location.href='../../html/inventory/search_detail.html'">
+                                    <span>2018/8/31<br>9:32:00AM</span>
+                                </td>
+                                <td onclick="location.href='../../html/inventory/search_detail.html'">2018/8/31<br>4:24:00PM</td>
+                                <td onclick="location.href='../../html/inventory/search_detail.html'">00203109</td>
+                                <td onclick="location.href='../../html/inventory/search_detail.html'">黃X瑜</td>
+                                <td onclick="location.href='../../html/inventory/search_detail.html'">完成</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="moresearch" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog dialog-sm" role="document">
+            <button type="button" class="ui-close" data-dismiss="modal" aria-label="Close"></button>
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="myModalLabel">搜尋申請單</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-slogan">您可以選擇手動、語音輸入或是掃描二維條碼</div>
+                    <div class="modal-row clearfix">
+                        <input type="text" class="inp-style1 pla_ct col-sm-11 d6" placeholder="輸入申請單號" />
+                        <div>
+                            <button class="col-sm-1 ui-scan"></button>
+                            <input type="file" id="scan2" accept="image/*" capture="environment" style="display: none;">
+                        </div>
+                    </div>
+                    <div class="modal-row clearfix">
+                        <input type="text" class="inp-style1 pla_ct col-sm-11 d1" placeholder="輸入說明" />
+                    </div>
+                    <div class="modal-row clearfix">
+                        <input type="text" class="inp-style1 pla_ct col-sm-11 d2" placeholder="輸入申請人" />
+                    </div>
+                    <div class="modal-row clearfix">
+                        <input type="text"" class=" inp-style1 pla_ct col-sm-11 d3" placeholder="輸入申請課別" />
+                    </div>
+                    <div class="modal-row clearfix">
+                        <input type="text" class="inp-style1 pla_ct col-sm-11 d4" placeholder="輸入倉庫" />
+                    </div>
+                    <div class="modal-row clearfix">
+                        <input type="date" class="inp-style1 pla_ct col-sm-11 d5" placeholder="選擇選擇預期日期" />
+                    </div>
+
+                </div>
+
+                <div class="modal-footer col-sm-11">
+                    <button type="button" class="clear_data submit_btn wid_180px" style="position: relative; left: -50px;">清除</button>
+                    <button type="button" data-dismiss="modal" class="submit_btn wid_180px" style="position: relative; left: -20px;">查詢</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal -->
+
+
+
+
+
+
+</body>
+
+</html>

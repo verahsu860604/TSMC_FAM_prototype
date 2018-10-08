@@ -766,6 +766,13 @@
   padding: 10px;
   margin-bottom: 10px;
 }
+
+.submit_btn5 {
+  width: 40%;
+  margin: auto;
+  padding: 10px;
+  margin-bottom: 10px;
+}
 .modal-body .search-content {
   width: 100%;
 }

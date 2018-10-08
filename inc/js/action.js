@@ -126,6 +126,18 @@ function storageTab() {
   $('#storageTab').show();
 }
 
+function doneTab() {
+  console.log('inventory pressed');
+  $('#inventoryTab').hide();
+  $('#doneTab').show();
+}
+
+function inventoryTab() {
+  console.log('inventory pressed');
+  $('#doneTab').hide();
+  $('#inventoryTab').show();
+}
+
 function today(){
   $('.finish').html('本日完成');
   $(this).html('本日(含)以前(16)');
@@ -165,6 +177,8 @@ $(() => {
   $('.today').click(today);
   $('.storage').click(storageTab);
   $('.apply').click(applyTab);
+  $('.inventoryList').click(inventoryTab);
+  $('.inventoryDone').click(doneTab);
   $('.close_child').click(switchSingleWorkOrder);
   $('.open_child').click(switchSingleWorkOrder);
   $('.manpower').click(setToZero);

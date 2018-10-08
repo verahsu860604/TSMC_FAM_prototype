@@ -71,6 +71,14 @@
     outline: none;
 }
 
+.submit_btn5{
+    border-radius:30px;
+    background-color: #f04c32;
+    color: #fff;
+    font-size: 24px;
+    letter-spacing: -0.3px;
+}
+
 .submit_btn.cancel {
     background-color: #4a4a4a;
     color: #fff;
@@ -118,7 +126,7 @@ background-color: #fbb8b0;
 /*width*/
 .wid_100per{width: 100%;}
 .wid_90per{width: 90%;}
-
+.wid_80per{width: 80%;}
 .wid_60per {
     width: 60%;
 }
@@ -148,6 +156,8 @@ width: 50%;
 .max_wid_100px {
     max-width: 100px;
 }
+
+
 /*margin*/
 .mar_b15px{
     margin-bottom: 25px;
@@ -158,6 +168,10 @@ width: 50%;
 
 .mar_b10px{
     margin-bottom: 10px;
+}
+
+.mar_b80px{
+    margin-bottom: 80px;
 }
 
 /*padding*/
