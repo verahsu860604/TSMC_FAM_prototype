@@ -41,7 +41,7 @@
                     &nbsp;收合</span>
             </h1>
             <div class="btn-box col-sm-3">
-                <button class="submit_btn1 txt_red float-r" data-toggle="modal" data-target="#modal_submit" id="save_btn">呈核</button>
+                <button class="submit_btn1 txt_red float-r" data-toggle="modal" data-target="#modal_submit">呈核</button>
                 <button class="submit_btn1 txt_red float-r " data-toggle="modal" data-target="#modal_error">儲存</button>
             </div>
         </div>
@@ -751,9 +751,8 @@
                         <!-- <textarea name="" id="" cols="30" rows="10" class="col-sm-12" placeholder="輸入簽核意見"></textarea> -->
                     </div>
                     <div class="btn-grp modal-row">
-                        <button type="button" data-dismiss="modal" data-target="#modal_success" data-toggle="modal"
-                            class="submit_btn5 mar_b15px" style="background-color: #4a4a4a;">取消</button>
-                        <button type="button" class="submit_btn5 mar_b15px cancel">確定</button>
+                        <button type="button" class="submit_btn5 mar_b15px" style="background-color: #4a4a4a;">取消</button>
+                        <button type="button" data-dismiss="modal" data-target="#modal_message" data-toggle="modal" class="submit_btn5 mar_b15px">確定</button>
                     </div>
                 </div>
             </div>
@@ -777,6 +776,25 @@
             </div>
         </div>
     </div>
+    <!-- 系統訊息跳窗 -->
+    <div class="modal fade" id="modal_message" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+    
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="ui-close dark" data-dismiss="modal" aria-label="Close"></button>
+                        <h4 class="modal-title" id="myModalLabel">系統訊息</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="modal-slogan">BMXZZ01281-</div>
+                        <div class="modal-slogan">注意！實際盤點數量與庫存數量不符筆數共計N筆，結案後將會自動產生盤點異常單，並填寫不符合之原因說明</div>
+                        <div class="btn-grp modal-row">
+                            <a href="search_list.html" class="submit_btn mar_b15px" style="text-align: center; color: #fff;">確定</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
     <!-- 選取計劃用料跳窗 -->
     <div class="modal fade" id="modal_choose_material" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
