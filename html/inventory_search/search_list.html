@@ -75,10 +75,20 @@
 
         </div>
         <div class="sticky">
+            <div class="clearfix mar_b15px">
+                <i class="ui-search-trigger"></i>
+                <span class="detail-page-title1">料件 &nbsp; <input type="text" class="inp-style2" value="" placeholder="xxx"
+                        style="width:100px"><button class="search-scan1"></button></span>
+                <span class="detail-page-title1">廠區 &nbsp; <input type="text" class="inp-style2" value="" placeholder="xxx"
+                        style="width:100px"></span>
+                <span class="detail-page-title1">倉庫 &nbsp; <input type="text" class="inp-style2" value="" placeholder="xxx"
+                        style="width:100px"></span>
+                <span><button class="submit_btn4">查詢</button></span>
+            </div>
             <!-- <div class="header-logo sm">
                 <a href="#" class="logo_only"></a>
             </div> -->
-            <div class="head-searchbox">
+            <!-- <div class="head-searchbox">
                 <div class="search-content">
                     <div class="search_cal col-sm-11">
                         <i class="ui-search-trigger col-sm-1"></i>
@@ -99,10 +109,10 @@
                 <a href="#" data-toggle="modal" data-target="#moresearch" class="link_red1">進階查詢</a>
 
 
-            </div>
+            </div> -->
         </div>
         <div id="menu">
-            <nav class="nav_mega_menu">
+            <!-- <nav class="nav_mega_menu">
                 <ul>
                     <li class=" btn_org12 active">
                         <a href="#" class="inventoryList">定期盤點計劃清單</a>
@@ -114,11 +124,11 @@
                         <a class="inventoryDone" href="#">本日完成</a>
                     </li>
                 </ul>
-            </nav>
+            </nav> -->
         </div>
     </div>
     <div id="contact">
-        <div class="wrapper-size1">
+        <div class="wrapper-size2">
             <div class="nav-list txt_ct mar_b15px">
                 <!-- <ul class="nav-tabs2 wid_50per" role="tablist">
                     <li role="presentation" class="active wid_50per">
@@ -143,15 +153,6 @@
                                 </label>
                             </div> -->
                 </div>
-
-                <div class="extend-table1">
-                    <span>共1筆</span>
-                </div>
-                <div class="extend-table">
-                    <div class="onoffs2">
-                        <button onclick="" class="submit_btn4" id="storageBtn" style="display: none;">公司帳入庫開單</button>
-                    </div>
-                </div>
             </div>
 
             <div class="tab-content">
@@ -159,17 +160,18 @@
                     <table class="tb_sin wid_100per">
                         <thead>
                             <tr>
-                                <th style="width: 60px;" class="table_ha">盤點計劃編號</th>
+                                <th style="width: 60px;" class="table_ha">料件</th>
                                 <!-- <th style="width: 30px;"></th> -->
-                                <th class="table_ha">盤點計畫名稱</th>
+                                <th class="table_ha">說明</th>
                                 <th class="table_ha">廠區</th>
                                 <th class="table_ha">倉庫 <br>
                                     <!-- <button onclick="#" class="submit_btn3">庫存快照時間</button></th> -->
-                                <th class="table_ha">庫存快照時間</th>
-                                <th class="table_ha">盤點確認時間</th>
-                                <th class="table_ha">課別代號</th>
-                                <th class="wid_120px table_ha">建立者</th>
-                                <th class="table_ha">狀態說明</th>
+                                <th class="table_ha">櫃位</th>
+                                <th class="table_ha">櫃位說明</th>
+                                <th class="table_ha">櫃位課別</th>
+                                <th class="wid_120px table_ha">供應商代號<br>供應商名稱</th>
+                                <th class="table_ha">庫存量</th>
+                                <th></th>
                             </tr>
                         </thead>
                         <tbody>
@@ -177,69 +179,106 @@
                                 <td class="main" onclick="location.href='../../html/inventory/search_detail.html'">
                                     <!-- <small class="txt_gray4">母工單(3) </small> -->
                                     <!-- <br/> -->
-                                    <span class="txt_big title_num">F1420180900 </span>
+                                    <span class="txt_big title_num">30028006 </span>
                                 </td>
                                 <td onclick="location.href='../../html/inventory/search_detail.html'">
                                     <!-- <span> <img src="../../inc/svg/minus.svg" alt="open" class="close_child" style="width: 18px;height: 18px; margin-top: 15px;"></span> -->
-                                    <span>南科廠務庫房9月盤點計劃...</span>
+                                    <span>1/4”VCR VSGSKT/RETAL</span>
                                 </td>
-                                <td>F14</td>
-                                <td onclick="location.href='../../html/inventory/search_detail.html'">FWM-T<br>中科廠務庫...</td>
+                                <td>F15</td>
+                                <td onclick="location.href='../../html/inventory/search_detail.html'">FWM-TC<br>中科廠物庫房</td>
                                 <td onclick="location.href='../../html/inventory/search_detail.html'">
-                                    <span>2018/8/31<br>9:12:00AM</span>
+                                    <span>A06-0205</span>
                                 </td>
-                                <td onclick="location.href='../../html/inventory/search_detail.html'">2018/8/31<br>4:24:00PM</td>
-                                <td onclick="location.href='../../html/inventory/search_detail.html'">00203109</td>
-                                <td onclick="location.href='../../html/inventory/search_detail.html'">廠商<br>謝X雅</td>
-                                <td onclick="location.href='../../html/inventory/search_detail.html'">盤點中</td>
+                                <td onclick="location.href='../../html/inventory/search_detail.html'">TCFAC-5-03</td>
+                                <td onclick="location.href='../../html/inventory/search_detail.html'"></td>
+                                <td onclick="location.href='../../html/inventory/search_detail.html'"></td>
+                                <td onclick="location.href='../../html/inventory/search_detail.html'">400</td>
+                                <td onclick="location.href='../../html/inventory/search_detail.html'"><span class="txt_org">more...</span></td>
                             </tr>
-                        </tbody>
-                        <tfoot>
-                            <tr>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                        </tfoot>
-                    </table>
-                </div>
-                <div role="tabpanel" class="tab-pane" id="doneTab">
-
-                    <table class="tb_sin wid_100per">
-                        <thead>
-                            <tr>
-                                <th style="width: 60px;" class="table_ha">盤點計劃編號</th>
-                                <!-- <th style="width: 30px;"></th> -->
-                                <th class="table_ha">盤點計畫名稱</th>
-                                <th class="table_ha">廠區</th>
-                                <th class="table_ha">倉庫 <br>
-                                <th class="table_ha">庫存快照時間</th>
-                                <th class="table_ha">盤點確認時間</th>
-                                <th class="table_ha">課別代號</th>
-                                <th class="wid_120px table_ha">建立者</th>
-                                <th class="table_ha">狀態說明</th>
-                            </tr>
-                        </thead>
-                        <tbody>
                             <tr class="tr1">
                                 <td class="main" onclick="location.href='../../html/inventory/search_detail.html'">
-                                    <span class="txt_big title_num">F1420180900</span>
+                                    <!-- <small class="txt_gray4">母工單(3) </small> -->
+                                    <!-- <br/> -->
+                                    <span class="txt_big title_num">30028006 </span>
                                 </td>
                                 <td onclick="location.href='../../html/inventory/search_detail.html'">
-                                    <span>南科廠務庫房9月盤點計劃...</span>
+                                    <!-- <span> <img src="../../inc/svg/minus.svg" alt="open" class="close_child" style="width: 18px;height: 18px; margin-top: 15px;"></span> -->
+                                    <span>1/4”VCR VSGSKT/RETAL</span>
                                 </td>
-                                <td>F14</td>
-                                <td onclick="location.href='../../html/inventory/search_detail.html'">FWM-T <br> 中科廠務庫...</td>
+                                <td>F15</td>
+                                <td onclick="location.href='../../html/inventory/search_detail.html'">FWM-TC<br>中科廠物庫房</td>
                                 <td onclick="location.href='../../html/inventory/search_detail.html'">
-                                    <span>2018/8/31<br>9:32:00AM</span>
+                                    <span>A06-0205</span>
                                 </td>
-                                <td onclick="location.href='../../html/inventory/search_detail.html'">2018/8/31<br>4:24:00PM</td>
-                                <td onclick="location.href='../../html/inventory/search_detail.html'">00203109</td>
-                                <td onclick="location.href='../../html/inventory/search_detail.html'">黃X瑜</td>
-                                <td onclick="location.href='../../html/inventory/search_detail.html'">完成</td>
+                                <td onclick="location.href='../../html/inventory/search_detail.html'">TCFAC-5-03</td>
+                                <td onclick="location.href='../../html/inventory/search_detail.html'"></td>
+                                <td onclick="location.href='../../html/inventory/search_detail.html'"></td>
+                                <td onclick="location.href='../../html/inventory/search_detail.html'">4400</td>
+                                <td onclick="location.href='../../html/inventory/search_detail.html'"><span class="txt_org">more...</span></td>
+                            </tr>
+                            <tr class="tr1">
+                                <td class="main" onclick="location.href='../../html/inventory/search_detail.html'">
+                                    <!-- <small class="txt_gray4">母工單(3) </small> -->
+                                    <!-- <br/> -->
+                                    <span class="txt_big title_num">30028006 </span>
+                                </td>
+                                <td onclick="location.href='../../html/inventory/search_detail.html'">
+                                    <!-- <span> <img src="../../inc/svg/minus.svg" alt="open" class="close_child" style="width: 18px;height: 18px; margin-top: 15px;"></span> -->
+                                    <span>1/4”VCR VSGSKT/RETAL</span>
+                                </td>
+                                <td>F15</td>
+                                <td onclick="location.href='../../html/inventory/search_detail.html'">FWM-TC<br>中科廠物庫房</td>
+                                <td onclick="location.href='../../html/inventory/search_detail.html'">
+                                    <span>A06-0205</span>
+                                </td>
+                                <td onclick="location.href='../../html/inventory/search_detail.html'">TCFAC-5-02<br>TCFAC-5-03</td>
+                                <td onclick="location.href='../../html/inventory/search_detail.html'"></td>
+                                <td onclick="location.href='../../html/inventory/search_detail.html'"></td>
+                                <td onclick="location.href='../../html/inventory/search_detail.html'">3000</td>
+                                <td onclick="location.href='../../html/inventory/search_detail.html'"><span class="txt_org">more...</span></td>
+                            </tr>
+                            <tr class="tr1">
+                                <td class="main" onclick="location.href='../../html/inventory/search_detail.html'">
+                                    <!-- <small class="txt_gray4">母工單(3) </small> -->
+                                    <!-- <br/> -->
+                                    <span class="txt_big title_num">30028006 </span>
+                                </td>
+                                <td onclick="location.href='../../html/inventory/search_detail.html'">
+                                    <!-- <span> <img src="../../inc/svg/minus.svg" alt="open" class="close_child" style="width: 18px;height: 18px; margin-top: 15px;"></span> -->
+                                    <span>1/4”VCR VSGSKT/RETAL</span>
+                                </td>
+                                <td>F15</td>
+                                <td onclick="location.href='../../html/inventory/search_detail.html'">FWM-TC<br>中科廠物庫房</td>
+                                <td onclick="location.href='../../html/inventory/search_detail.html'">
+                                    <span>A06-0205</span>
+                                </td>
+                                <td onclick="location.href='../../html/inventory/search_detail.html'">TCFAC-5-03</td>
+                                <td onclick="location.href='../../html/inventory/search_detail.html'"></td>
+                                <td onclick="location.href='../../html/inventory/search_detail.html'"></td>
+                                <td onclick="location.href='../../html/inventory/search_detail.html'">440</td>
+                                <td onclick="location.href='../../html/inventory/search_detail.html'"><span class="txt_org">more...</span></td>
+                            </tr>
+                            <tr class="tr1">
+                                <td class="main" onclick="location.href='../../html/inventory/search_detail.html'">
+                                    <!-- <small class="txt_gray4">母工單(3) </small> -->
+                                    <!-- <br/> -->
+                                    <span class="txt_big title_num">30028006 </span>
+                                </td>
+                                <td onclick="location.href='../../html/inventory/search_detail.html'">
+                                    <!-- <span> <img src="../../inc/svg/minus.svg" alt="open" class="close_child" style="width: 18px;height: 18px; margin-top: 15px;"></span> -->
+                                    <span>1/4”VCR VSGSKT/RETAL</span>
+                                </td>
+                                <td>F15</td>
+                                <td onclick="location.href='../../html/inventory/search_detail.html'">FWM-TC<br>中科廠物庫房</td>
+                                <td onclick="location.href='../../html/inventory/search_detail.html'">
+                                    <span>A06-0205</span>
+                                </td>
+                                <td onclick="location.href='../../html/inventory/search_detail.html'">TCFAC-5-03</td>
+                                <td onclick="location.href='../../html/inventory/search_detail.html'"></td>
+                                <td onclick="location.href='../../html/inventory/search_detail.html'"></td>
+                                <td onclick="location.href='../../html/inventory/search_detail.html'">99</td>
+                                <td onclick="location.href='../../html/inventory/search_detail.html'"><span class="txt_org">more...</span></td>
                             </tr>
                         </tbody>
                         <tfoot>
