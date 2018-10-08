@@ -39,11 +39,18 @@ $(function() {
       $('.wrapper-size').addClass('shrink')
       $('.tb_sin1').hide()
       $('.sticky').addClass('scrollUp');
+      $('.tb_sin3').css("margin-top",'140px');
+      $('.tb_sin4').css("margin-top",'140px');
+
     }else{
       $('.header-logo').addClass('sm')
       $('.wrapper-size').removeClass('shrink')
       $('.tb_sin1').show()
       $('.sticky').removeClass('scrollUp');
+      $('.tb_sin3').css("margin-top",'200px');
+      $('.tb_sin4').css("margin-top",'165px');
+
+
     }
   })
 

@@ -1057,3 +1057,9 @@ input:checked + .slider:before {
   height: 30px;
   margin-bottom:25px;
 }
+.asn_preview > th {
+  padding: 5px;
+}
+.asn_preview > tr>td{
+  padding: 14px;
+}

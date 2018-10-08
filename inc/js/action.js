@@ -150,6 +150,20 @@ function showPassword(){
     $('.password').clone().prop('type','password').insertAfter('.password').prev().remove();
   }
 }
+function tableChildExpand(){
+  var name = $(this).siblings('.txt_ct').text();
+  // console.log($(this).parent().siblings('.tchild'+name),name,'.tchild'+name);
+  if($(this).parent().siblings('.tchild'+name).hasClass('show111')){
+    $(this).parent().siblings('.tchild'+name).hide();
+    $(this).parent().siblings('.tchild'+name).removeClass('show111');
+    $(this).css('transform', 'rotate(0deg)');
+  }else{
+    $(this).parent().siblings('.tchild'+name).show();
+    $(this).parent().siblings('.tchild'+name).addClass('show111');   
+    $(this).css('transform', 'rotate(180deg)');
+
+  }
+}
 
 $(() => {
   // $('#switch').on('change', switchWorkOrder);
@@ -171,6 +185,7 @@ $(() => {
   $('.tool').click(setToZero);
   $('.material').click(setToZero);
   $('.show-password').click(showPassword);
+  $('.expand').click(tableChildExpand);
 
 
 })
